@@ -6,9 +6,9 @@
 #include "driver/twai.h"
 #include "driver/gpio.h"
 
-#define TX_GPIO_NUM ((gpio_num_t)5)
-#define RX_GPIO_NUM ((gpio_num_t)4)
-#define LED_GPIO ((gpio_num_t)13)
+#define TX_GPIO_NUM ((gpio_num_t)4)
+#define RX_GPIO_NUM ((gpio_num_t)5)
+#define LED_GPIO ((gpio_num_t)17)
 
 // Parâmetros do LED
 #define MIN_DISTANCE_CM 5.0
@@ -17,7 +17,7 @@
 #define MAX_FREQUENCY_HZ 10.0
 
 // Tempo máximo sem mensagem antes de considerar desconectado (em ms)
-#define TIMEOUT_SEM_MENSAGEM_MS 3000
+#define TIMEOUT_SEM_MENSAGEM_MS 1000
 
 void app_main(void) {
     // Configura GPIO do LED

@@ -1,0 +1,1076 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 25 2025 14:38:36[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b814h ( 47124) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001b83c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001b860 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001dca0 vaddr=40080000 size=02378h (  9080) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17418h ( 95256) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=00037440 vaddr=40082378 size=0c214h ( 49684) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     CAN[0m
+[0;32mI (206) app_init: App version:      1[0m
+[0;32mI (210) app_init: Compile time:     May 25 2025 14:38:24[0m
+[0;32mI (215) app_init: ELF file SHA256:  a94c131e4...[0m
+[0;32mI (219) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008E58C len 00011A74 (70 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;33mW (274) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (287) main_task: Started on CPU0[0m
+[0;32mI (297) main_task: Calling app_main()[0m
+[0;32mI (297) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (297) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (307) CAN_ULTRASONIC_CPP: Resetando MCP2515...[0m
+[0;32mI (417) CAN_ULTRASONIC_CPP: Configurando bitrate...[0m
+[0;32mI (417) CAN_ULTRASONIC_CPP: Configurando modo normal...[0m
+[0;32mI (417) CAN_ULTRASONIC_CPP: Distância medida: 121.18 cm[0m
+[0;33mW (417) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (927) CAN_ULTRASONIC_CPP: Distância medida: 122.90 cm[0m
+[0;33mW (927) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (1427) CAN_ULTRASONIC_CPP: Distância medida: 122.47 cm[0m
+[0;33mW (1427) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (1927) CAN_ULTRASONIC_CPP: Distância medida: 122.88 cm[0m
+[0;33mW (1927) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (2427) CAN_ULTRASONIC_CPP: Distância medida: 122.47 cm[0m
+[0;33mW (2427) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (2937) CAN_ULTRASONIC_CPP: Distância medida: 210.07 cm[0m
+[0;33mW (2937) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (3437) CAN_ULTRASONIC_CPP: Distância medida: 41.13 cm[0m
+[0;32mI (3437) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 41.13 cm[0m
+[0;32mI (3937) CAN_ULTRASONIC_CPP: Distância medida: 12.13 cm[0m
+[0;32mI (3937) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 12.13 cm[0m
+[0;32mI (4437) CAN_ULTRASONIC_CPP: Distância medida: 9.67 cm[0m
+[0;32mI (4437) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.67 cm[0m
+[0;32mI (4937) CAN_ULTRASONIC_CPP: Distância medida: 9.76 cm[0m
+[0;32mI (4937) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.76 cm[0m
+[0;33mW (5467) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (5467) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (5467) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (5967) CAN_ULTRASONIC_CPP: Distância medida: 12.40 cm[0m
+[0;32mI (5967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 12.40 cm[0m
+[0;32mI (6467) CAN_ULTRASONIC_CPP: Distância medida: 10.55 cm[0m
+[0;32mI (6467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.55 cm[0m
+[0;32mI (6967) CAN_ULTRASONIC_CPP: Distância medida: 10.70 cm[0m
+[0;32mI (6967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.70 cm[0m
+[0;32mI (7467) CAN_ULTRASONIC_CPP: Distância medida: 8.90 cm[0m
+[0;32mI (7467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.90 cm[0m
+[0;32mI (7967) CAN_ULTRASONIC_CPP: Distância medida: 9.67 cm[0m
+[0;32mI (7967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.67 cm[0m
+[0;32mI (8467) CAN_ULTRASONIC_CPP: Distância medida: 10.02 cm[0m
+[0;32mI (8467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.02 cm[0m
+[0;32mI (8967) CAN_ULTRASONIC_CPP: Distância medida: 12.81 cm[0m
+[0;32mI (8967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 12.81 cm[0m
+[0;32mI (9467) CAN_ULTRASONIC_CPP: Distância medida: 10.38 cm[0m
+[0;32mI (9467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.38 cm[0m
+[0;32mI (9967) CAN_ULTRASONIC_CPP: Distância medida: 10.02 cm[0m
+[0;32mI (9967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.02 cm[0m
+[0;32mI (10467) CAN_ULTRASONIC_CPP: Distância medida: 12.98 cm[0m
+[0;32mI (10467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 12.98 cm[0m
+[0;32mI (10967) CAN_ULTRASONIC_CPP: Distância medida: 9.60 cm[0m
+[0;32mI (10967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.60 cm[0m
+[0;32mI (11467) CAN_ULTRASONIC_CPP: Distância medida: 11.63 cm[0m
+[0;32mI (11467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.63 cm[0m
+[0;32mI (11967) CAN_ULTRASONIC_CPP: Distância medida: 23.00 cm[0m
+[0;32mI (11967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 23.00 cm[0m
+[0;32mI (12467) CAN_ULTRASONIC_CPP: Distância medida: 23.00 cm[0m
+[0;32mI (12467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 23.00 cm[0m
+[0;32mI (12967) CAN_ULTRASONIC_CPP: Distância medida: 10.70 cm[0m
+[0;32mI (12967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.70 cm[0m
+[0;32mI (13467) CAN_ULTRASONIC_CPP: Distância medida: 11.56 cm[0m
+[0;32mI (13467) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.56 cm[0m
+[0;32mI (13967) CAN_ULTRASONIC_CPP: Distância medida: 15.09 cm[0m
+[0;32mI (13967) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 15.09 cm[0m
+[0;33mW (14497) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (14497) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (14497) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (15027) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (15027) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (15027) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (15527) CAN_ULTRASONIC_CPP: Distância medida: 9.67 cm[0m
+[0;32mI (15527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.67 cm[0m
+[0;32mI (16027) CAN_ULTRASONIC_CPP: Distância medida: 11.03 cm[0m
+[0;32mI (16027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.03 cm[0m
+[0;32mI (16527) CAN_ULTRASONIC_CPP: Distância medida: 11.46 cm[0m
+[0;32mI (16527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.46 cm[0m
+[0;32mI (17027) CAN_ULTRASONIC_CPP: Distância medida: 8.49 cm[0m
+[0;32mI (17027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.49 cm[0m
+[0;32mI (17527) CAN_ULTRASONIC_CPP: Distância medida: 8.08 cm[0m
+[0;32mI (17527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.08 cm[0m
+[0;32mI (18027) CAN_ULTRASONIC_CPP: Distância medida: 11.11 cm[0m
+[0;32mI (18027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.11 cm[0m
+[0;32mI (18527) CAN_ULTRASONIC_CPP: Distância medida: 8.57 cm[0m
+[0;32mI (18527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.57 cm[0m
+[0;32mI (19027) CAN_ULTRASONIC_CPP: Distância medida: 8.57 cm[0m
+[0;32mI (19027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.57 cm[0m
+[0;32mI (19527) CAN_ULTRASONIC_CPP: Distância medida: 8.32 cm[0m
+[0;32mI (19527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.32 cm[0m
+[0;32mI (20027) CAN_ULTRASONIC_CPP: Distância medida: 10.02 cm[0m
+[0;32mI (20027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.02 cm[0m
+[0;32mI (20527) CAN_ULTRASONIC_CPP: Distância medida: 8.33 cm[0m
+[0;32mI (20527) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.33 cm[0m
+[0;32mI (21027) CAN_ULTRASONIC_CPP: Distância medida: 8.40 cm[0m
+[0;32mI (21027) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.40 cm[0m
+[0;33mW (21557) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (21557) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (21557) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (22057) CAN_ULTRASONIC_CPP: Distância medida: 8.40 cm[0m
+[0;32mI (22057) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.40 cm[0m
+[0;32mI (22557) CAN_ULTRASONIC_CPP: Distância medida: 20.63 cm[0m
+[0;32mI (22557) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 20.63 cm[0m
+[0;32mI (23057) CAN_ULTRASONIC_CPP: Distância medida: 21.54 cm[0m
+[0;32mI (23057) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 21.54 cm[0m
+[0;33mW (23587) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (23587) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (23587) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (24087) CAN_ULTRASONIC_CPP: Distância medida: 19.77 cm[0m
+[0;32mI (24087) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 19.77 cm[0m
+[0;32mI (24587) CAN_ULTRASONIC_CPP: Distância medida: 7.99 cm[0m
+[0;32mI (24587) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.99 cm[0m
+[0;32mI (25087) CAN_ULTRASONIC_CPP: Distância medida: 11.95 cm[0m
+[0;32mI (25087) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.95 cm[0m
+[0;32mI (25597) CAN_ULTRASONIC_CPP: Distância medida: 205.89 cm[0m
+[0;33mW (25597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (26097) CAN_ULTRASONIC_CPP: Distância medida: 46.84 cm[0m
+[0;32mI (26097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 46.84 cm[0m
+[0;32mI (26597) CAN_ULTRASONIC_CPP: Distância medida: 112.02 cm[0m
+[0;33mW (26597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (27097) CAN_ULTRASONIC_CPP: Distância medida: 121.71 cm[0m
+[0;33mW (27097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (27597) CAN_ULTRASONIC_CPP: Distância medida: 118.47 cm[0m
+[0;33mW (27597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (28097) CAN_ULTRASONIC_CPP: Distância medida: 120.10 cm[0m
+[0;33mW (28097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (28597) CAN_ULTRASONIC_CPP: Distância medida: 120.10 cm[0m
+[0;33mW (28597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (29097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (29097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (29597) CAN_ULTRASONIC_CPP: Distância medida: 120.86 cm[0m
+[0;33mW (29597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (30097) CAN_ULTRASONIC_CPP: Distância medida: 122.55 cm[0m
+[0;33mW (30097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (30597) CAN_ULTRASONIC_CPP: Distância medida: 118.82 cm[0m
+[0;33mW (30597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (31097) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (31097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (31597) CAN_ULTRASONIC_CPP: Distância medida: 120.86 cm[0m
+[0;33mW (31597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (32097) CAN_ULTRASONIC_CPP: Distância medida: 121.28 cm[0m
+[0;33mW (32097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (32597) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (32597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (33097) CAN_ULTRASONIC_CPP: Distância medida: 125.86 cm[0m
+[0;33mW (33097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (33597) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (33597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (34097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (34097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (34597) CAN_ULTRASONIC_CPP: Distância medida: 118.40 cm[0m
+[0;33mW (34597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (35097) CAN_ULTRASONIC_CPP: Distância medida: 119.18 cm[0m
+[0;33mW (35097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (35597) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (35597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (36097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (36097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (36597) CAN_ULTRASONIC_CPP: Distância medida: 117.97 cm[0m
+[0;33mW (36597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (37097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (37097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (37597) CAN_ULTRASONIC_CPP: Distância medida: 119.16 cm[0m
+[0;33mW (37597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (38097) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (38097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (38597) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (38597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (39097) CAN_ULTRASONIC_CPP: Distância medida: 120.41 cm[0m
+[0;33mW (39097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (39597) CAN_ULTRASONIC_CPP: Distância medida: 7.65 cm[0m
+[0;32mI (39597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.65 cm[0m
+[0;32mI (40097) CAN_ULTRASONIC_CPP: Distância medida: 6.71 cm[0m
+[0;32mI (40097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.71 cm[0m
+[0;32mI (40597) CAN_ULTRASONIC_CPP: Distância medida: 8.90 cm[0m
+[0;32mI (40597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.90 cm[0m
+[0;32mI (41097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (41097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (41597) CAN_ULTRASONIC_CPP: Distância medida: 120.86 cm[0m
+[0;33mW (41597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (42097) CAN_ULTRASONIC_CPP: Distância medida: 121.71 cm[0m
+[0;33mW (42097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (42597) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (42597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (43097) CAN_ULTRASONIC_CPP: Distância medida: 118.40 cm[0m
+[0;33mW (43097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (43597) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (43597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (44097) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (44097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (44597) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (44597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (45097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (45097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (45597) CAN_ULTRASONIC_CPP: Distância medida: 122.88 cm[0m
+[0;33mW (45597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (46097) CAN_ULTRASONIC_CPP: Distância medida: 8.32 cm[0m
+[0;32mI (46097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.32 cm[0m
+[0;32mI (46597) CAN_ULTRASONIC_CPP: Distância medida: 7.32 cm[0m
+[0;32mI (46597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.32 cm[0m
+[0;32mI (47097) CAN_ULTRASONIC_CPP: Distância medida: 6.36 cm[0m
+[0;32mI (47097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.36 cm[0m
+[0;32mI (47597) CAN_ULTRASONIC_CPP: Distância medida: 6.29 cm[0m
+[0;32mI (47597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.29 cm[0m
+[0;32mI (48097) CAN_ULTRASONIC_CPP: Distância medida: 7.05 cm[0m
+[0;32mI (48097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.05 cm[0m
+[0;32mI (48597) CAN_ULTRASONIC_CPP: Distância medida: 7.05 cm[0m
+[0;32mI (48597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.05 cm[0m
+[0;32mI (49097) CAN_ULTRASONIC_CPP: Distância medida: 6.62 cm[0m
+[0;32mI (49097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.62 cm[0m
+[0;32mI (49597) CAN_ULTRASONIC_CPP: Distância medida: 7.05 cm[0m
+[0;32mI (49597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.05 cm[0m
+[0;32mI (50097) CAN_ULTRASONIC_CPP: Distância medida: 5.61 cm[0m
+[0;32mI (50097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.61 cm[0m
+[0;32mI (50597) CAN_ULTRASONIC_CPP: Distância medida: 5.95 cm[0m
+[0;32mI (50597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.95 cm[0m
+[0;32mI (51097) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (51097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (51597) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (51597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (52097) CAN_ULTRASONIC_CPP: Distância medida: 120.82 cm[0m
+[0;33mW (52097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (52597) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (52597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (53097) CAN_ULTRASONIC_CPP: Distância medida: 21.06 cm[0m
+[0;32mI (53097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 21.06 cm[0m
+[0;32mI (53597) CAN_ULTRASONIC_CPP: Distância medida: 6.98 cm[0m
+[0;32mI (53597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.98 cm[0m
+[0;32mI (54097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (54097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (54597) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (54597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (55097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (55097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (55597) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (55597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (56097) CAN_ULTRASONIC_CPP: Distância medida: 122.55 cm[0m
+[0;33mW (56097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (56597) CAN_ULTRASONIC_CPP: Distância medida: 122.97 cm[0m
+[0;33mW (56597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (57097) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (57097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (57597) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (57597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (58097) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (58097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (58597) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (58597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (59097) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (59097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (59597) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (59597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (60097) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (60097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (60597) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (60597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (61097) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (61097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (61597) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (61597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (62097) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (62097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (62597) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (62597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (63097) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (63097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (63597) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (63597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (64097) CAN_ULTRASONIC_CPP: Distância medida: 120.86 cm[0m
+[0;33mW (64097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (64597) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (64597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (65097) CAN_ULTRASONIC_CPP: Distância medida: 7.82 cm[0m
+[0;32mI (65097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.82 cm[0m
+[0;32mI (65597) CAN_ULTRASONIC_CPP: Distância medida: 6.19 cm[0m
+[0;32mI (65597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.19 cm[0m
+[0;32mI (66097) CAN_ULTRASONIC_CPP: Distância medida: 5.88 cm[0m
+[0;32mI (66097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.88 cm[0m
+[0;32mI (66597) CAN_ULTRASONIC_CPP: Distância medida: 5.78 cm[0m
+[0;32mI (66597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.78 cm[0m
+[0;32mI (67097) CAN_ULTRASONIC_CPP: Distância medida: 11.03 cm[0m
+[0;32mI (67097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.03 cm[0m
+[0;32mI (67597) CAN_ULTRASONIC_CPP: Distância medida: 120.41 cm[0m
+[0;33mW (67597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (68097) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (68097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (68597) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (68597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (69097) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (69097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (69597) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (69597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (70097) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (70097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (70597) CAN_ULTRASONIC_CPP: Distância medida: 118.82 cm[0m
+[0;33mW (70597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (71097) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (71097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (71597) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (71597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (72097) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (72097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (72597) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (72597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (73097) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (73097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (73597) CAN_ULTRASONIC_CPP: Distância medida: 119.14 cm[0m
+[0;33mW (73597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (74097) CAN_ULTRASONIC_CPP: Distância medida: 37.06 cm[0m
+[0;32mI (74097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 37.06 cm[0m
+[0;32mI (74597) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (74597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (75097) CAN_ULTRASONIC_CPP: Distância medida: 38.43 cm[0m
+[0;32mI (75097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 38.43 cm[0m
+[0;32mI (75597) CAN_ULTRASONIC_CPP: Distância medida: 121.25 cm[0m
+[0;33mW (75597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (76097) CAN_ULTRASONIC_CPP: Distância medida: 37.15 cm[0m
+[0;32mI (76097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 37.15 cm[0m
+[0;32mI (76597) CAN_ULTRASONIC_CPP: Distância medida: 38.00 cm[0m
+[0;32mI (76597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 38.00 cm[0m
+[0;32mI (77097) CAN_ULTRASONIC_CPP: Distância medida: 39.27 cm[0m
+[0;32mI (77097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 39.27 cm[0m
+[0;32mI (77597) CAN_ULTRASONIC_CPP: Distância medida: 40.80 cm[0m
+[0;32mI (77597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 40.80 cm[0m
+[0;32mI (78097) CAN_ULTRASONIC_CPP: Distância medida: 37.76 cm[0m
+[0;32mI (78097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 37.76 cm[0m
+[0;32mI (78597) CAN_ULTRASONIC_CPP: Distância medida: 38.84 cm[0m
+[0;32mI (78597) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 38.84 cm[0m
+[0;32mI (79097) CAN_ULTRASONIC_CPP: Distância medida: 39.34 cm[0m
+[0;32mI (79097) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 39.34 cm[0m
+[0;32mI (79597) CAN_ULTRASONIC_CPP: Distância medida: 121.28 cm[0m
+[0;33mW (79597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (80097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (80097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (80597) CAN_ULTRASONIC_CPP: Distância medida: 117.96 cm[0m
+[0;33mW (80597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (81097) CAN_ULTRASONIC_CPP: Distância medida: 118.37 cm[0m
+[0;33mW (81097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (81597) CAN_ULTRASONIC_CPP: Distância medida: 121.28 cm[0m
+[0;33mW (81597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (82097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (82097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (82597) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (82597) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (83097) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (83097) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (83607) CAN_ULTRASONIC_CPP: Distância medida: 205.56 cm[0m
+[0;33mW (83607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (84107) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (84107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (84607) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (84607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (85107) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (85107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (85607) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (85607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (86107) CAN_ULTRASONIC_CPP: Distância medida: 120.51 cm[0m
+[0;33mW (86107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (86607) CAN_ULTRASONIC_CPP: Distância medida: 120.92 cm[0m
+[0;33mW (86607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (87107) CAN_ULTRASONIC_CPP: Distância medida: 9.67 cm[0m
+[0;32mI (87107) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.67 cm[0m
+[0;32mI (87607) CAN_ULTRASONIC_CPP: Distância medida: 5.76 cm[0m
+[0;32mI (87607) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.76 cm[0m
+[0;32mI (88107) CAN_ULTRASONIC_CPP: Distância medida: 5.69 cm[0m
+[0;32mI (88107) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.69 cm[0m
+[0;32mI (88607) CAN_ULTRASONIC_CPP: Distância medida: 5.20 cm[0m
+[0;32mI (88607) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.20 cm[0m
+[0;32mI (89107) CAN_ULTRASONIC_CPP: Distância medida: 5.44 cm[0m
+[0;32mI (89107) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.44 cm[0m
+[0;32mI (89607) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (89607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (90107) CAN_ULTRASONIC_CPP: Distância medida: 118.40 cm[0m
+[0;33mW (90107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (90607) CAN_ULTRASONIC_CPP: Distância medida: 118.37 cm[0m
+[0;33mW (90607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (91107) CAN_ULTRASONIC_CPP: Distância medida: 121.28 cm[0m
+[0;33mW (91107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (91607) CAN_ULTRASONIC_CPP: Distância medida: 123.72 cm[0m
+[0;33mW (91607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (92107) CAN_ULTRASONIC_CPP: Distância medida: 123.72 cm[0m
+[0;33mW (92107) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (92607) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (92607) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (93137) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (93137) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (93137) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (93647) CAN_ULTRASONIC_CPP: Distância medida: 181.05 cm[0m
+[0;33mW (93647) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (94157) CAN_ULTRASONIC_CPP: Distância medida: 206.06 cm[0m
+[0;33mW (94157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (94657) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (94657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (95157) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (95157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (95657) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (95657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (96157) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (96157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (96657) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (96657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (97157) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (97157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (97657) CAN_ULTRASONIC_CPP: Distância medida: 120.08 cm[0m
+[0;33mW (97657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (98157) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (98157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (98657) CAN_ULTRASONIC_CPP: Distância medida: 125.85 cm[0m
+[0;33mW (98657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (99157) CAN_ULTRASONIC_CPP: Distância medida: 125.44 cm[0m
+[0;33mW (99157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (99657) CAN_ULTRASONIC_CPP: Distância medida: 130.00 cm[0m
+[0;33mW (99657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (100157) CAN_ULTRASONIC_CPP: Distância medida: 132.04 cm[0m
+[0;33mW (100157) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (100657) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (100657) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (101157) CAN_ULTRASONIC_CPP: Distância medida: 18.68 cm[0m
+[0;32mI (101157) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 18.68 cm[0m
+[0;33mW (101687) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (101687) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (101687) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (102217) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (102217) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (102217) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (102717) CAN_ULTRASONIC_CPP: Distância medida: 123.39 cm[0m
+[0;33mW (102717) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (103227) CAN_ULTRASONIC_CPP: Distância medida: 206.81 cm[0m
+[0;33mW (103227) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (103727) CAN_ULTRASONIC_CPP: Distância medida: 120.92 cm[0m
+[0;33mW (103727) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (104227) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (104227) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (104727) CAN_ULTRASONIC_CPP: Distância medida: 119.66 cm[0m
+[0;33mW (104727) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (105257) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (105257) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (105257) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (105757) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (105757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (106257) CAN_ULTRASONIC_CPP: Distância medida: 120.07 cm[0m
+[0;33mW (106257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (106757) CAN_ULTRASONIC_CPP: Distância medida: 117.22 cm[0m
+[0;33mW (106757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (107257) CAN_ULTRASONIC_CPP: Distância medida: 118.04 cm[0m
+[0;33mW (107257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (107757) CAN_ULTRASONIC_CPP: Distância medida: 119.66 cm[0m
+[0;33mW (107757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (108257) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (108257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (108757) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (108757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (109257) CAN_ULTRASONIC_CPP: Distância medida: 126.24 cm[0m
+[0;33mW (109257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (109757) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (109757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (110257) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (110257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (110757) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (110757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (111257) CAN_ULTRASONIC_CPP: Distância medida: 119.66 cm[0m
+[0;33mW (111257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (111757) CAN_ULTRASONIC_CPP: Distância medida: 118.87 cm[0m
+[0;33mW (111757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (112257) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (112257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (112757) CAN_ULTRASONIC_CPP: Distância medida: 118.82 cm[0m
+[0;33mW (112757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (113257) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (113257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (113757) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (113757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (114257) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (114257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (114757) CAN_ULTRASONIC_CPP: Distância medida: 120.50 cm[0m
+[0;33mW (114757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (115257) CAN_ULTRASONIC_CPP: Distância medida: 123.81 cm[0m
+[0;33mW (115257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (115757) CAN_ULTRASONIC_CPP: Distância medida: 126.69 cm[0m
+[0;33mW (115757) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (116257) CAN_ULTRASONIC_CPP: Distância medida: 126.70 cm[0m
+[0;33mW (116257) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (116767) CAN_ULTRASONIC_CPP: Distância medida: 205.99 cm[0m
+[0;33mW (116767) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (117267) CAN_ULTRASONIC_CPP: Distância medida: 123.81 cm[0m
+[0;33mW (117267) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (117767) CAN_ULTRASONIC_CPP: Distância medida: 120.51 cm[0m
+[0;33mW (117767) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (118267) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (118267) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (118767) CAN_ULTRASONIC_CPP: Distância medida: 120.07 cm[0m
+[0;33mW (118767) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (119267) CAN_ULTRASONIC_CPP: Distância medida: 120.92 cm[0m
+[0;33mW (119267) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (119767) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (119767) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (120267) CAN_ULTRASONIC_CPP: Distância medida: 124.59 cm[0m
+[0;33mW (120267) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (120797) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (120797) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (120797) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (121297) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (121297) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (121797) CAN_ULTRASONIC_CPP: Distância medida: 119.24 cm[0m
+[0;33mW (121797) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (122297) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (122297) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (122797) CAN_ULTRASONIC_CPP: Distância medida: 118.82 cm[0m
+[0;33mW (122797) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (123297) CAN_ULTRASONIC_CPP: Distância medida: 120.82 cm[0m
+[0;33mW (123297) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (123797) CAN_ULTRASONIC_CPP: Distância medida: 122.97 cm[0m
+[0;33mW (123797) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (124297) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (124297) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (124797) CAN_ULTRASONIC_CPP: Distância medida: 122.55 cm[0m
+[0;33mW (124797) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (125297) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (125297) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (125797) CAN_ULTRASONIC_CPP: Distância medida: 106.84 cm[0m
+[0;33mW (125797) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (126327) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (126327) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (126327) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (126857) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (126857) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (126857) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (127387) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (127387) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (127387) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (127917) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (127917) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (127917) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (128447) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (128447) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (128447) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (128977) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (128977) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (128977) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (129507) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (129507) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (129507) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (130037) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (130037) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (130037) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (130567) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (130567) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (130567) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (131097) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (131097) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (131097) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (131627) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (131627) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (131627) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (132127) CAN_ULTRASONIC_CPP: Distância medida: 15.09 cm[0m
+[0;32mI (132127) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 15.09 cm[0m
+[0;32mI (132627) CAN_ULTRASONIC_CPP: Distância medida: 15.28 cm[0m
+[0;32mI (132627) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 15.28 cm[0m
+[0;33mW (133157) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (133157) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (133157) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (133687) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (133687) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (133687) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (134217) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (134217) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (134217) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (134747) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (134747) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (134747) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (135277) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (135277) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (135277) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (135807) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (135807) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (135807) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (136337) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (136337) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (136337) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (136867) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (136867) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (136867) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (137397) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (137397) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (137397) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (137927) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (137927) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (137927) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (138457) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (138457) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (138457) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (138987) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (138987) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (138987) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (139517) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (139517) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (139517) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (140047) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (140047) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (140047) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (140577) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (140577) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (140577) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (141107) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (141107) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (141107) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (141637) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (141637) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (141637) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (142167) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (142167) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (142167) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (142697) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (142697) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (142697) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (143227) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (143227) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (143227) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (143757) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (143757) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (143757) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (144287) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (144287) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (144287) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (144787) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (144787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (145287) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (145287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (145787) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (145787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (146287) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (146287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (146787) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (146787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (147287) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (147287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (147787) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (147787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (148287) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (148287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (148787) CAN_ULTRASONIC_CPP: Distância medida: 118.04 cm[0m
+[0;33mW (148787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (149287) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (149287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (149787) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (149787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (150287) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (150287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (150787) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (150787) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (151287) CAN_ULTRASONIC_CPP: Distância medida: 64.88 cm[0m
+[0;33mW (151287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (151787) CAN_ULTRASONIC_CPP: Distância medida: 10.86 cm[0m
+[0;32mI (151787) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.86 cm[0m
+[0;32mI (152287) CAN_ULTRASONIC_CPP: Distância medida: 119.55 cm[0m
+[0;33mW (152287) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (152787) CAN_ULTRASONIC_CPP: Distância medida: 6.53 cm[0m
+[0;32mI (152787) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.53 cm[0m
+[0;32mI (153287) CAN_ULTRASONIC_CPP: Distância medida: 4.75 cm[0m
+[0;32mI (153287) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 4.75 cm[0m
+[0;32mI (153787) CAN_ULTRASONIC_CPP: Distância medida: 7.56 cm[0m
+[0;32mI (153787) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.56 cm[0m
+[0;32mI (154287) CAN_ULTRASONIC_CPP: Distância medida: 6.79 cm[0m
+[0;32mI (154287) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.79 cm[0m
+[0;32mI (154787) CAN_ULTRASONIC_CPP: Distância medida: 6.29 cm[0m
+[0;32mI (154787) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.29 cm[0m
+[0;32mI (155287) CAN_ULTRASONIC_CPP: Distância medida: 9.43 cm[0m
+[0;32mI (155287) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.43 cm[0m
+[0;33mW (155817) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (155817) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (155817) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (156317) CAN_ULTRASONIC_CPP: Distância medida: 5.27 cm[0m
+[0;32mI (156317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.27 cm[0m
+[0;32mI (156817) CAN_ULTRASONIC_CPP: Distância medida: 3.91 cm[0m
+[0;32mI (156817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.91 cm[0m
+[0;32mI (157317) CAN_ULTRASONIC_CPP: Distância medida: 3.65 cm[0m
+[0;32mI (157317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.65 cm[0m
+[0;32mI (157817) CAN_ULTRASONIC_CPP: Distância medida: 3.65 cm[0m
+[0;32mI (157817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.65 cm[0m
+[0;32mI (158317) CAN_ULTRASONIC_CPP: Distância medida: 4.25 cm[0m
+[0;32mI (158317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 4.25 cm[0m
+[0;32mI (158817) CAN_ULTRASONIC_CPP: Distância medida: 3.40 cm[0m
+[0;32mI (158817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.40 cm[0m
+[0;32mI (159317) CAN_ULTRASONIC_CPP: Distância medida: 8.40 cm[0m
+[0;32mI (159317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 8.40 cm[0m
+[0;32mI (159817) CAN_ULTRASONIC_CPP: Distância medida: 3.40 cm[0m
+[0;32mI (159817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.40 cm[0m
+[0;32mI (160317) CAN_ULTRASONIC_CPP: Distância medida: 5.28 cm[0m
+[0;32mI (160317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.28 cm[0m
+[0;32mI (160817) CAN_ULTRASONIC_CPP: Distância medida: 7.89 cm[0m
+[0;32mI (160817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 7.89 cm[0m
+[0;32mI (161317) CAN_ULTRASONIC_CPP: Distância medida: 6.21 cm[0m
+[0;32mI (161317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 6.21 cm[0m
+[0;32mI (161817) CAN_ULTRASONIC_CPP: Distância medida: 9.50 cm[0m
+[0;32mI (161817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.50 cm[0m
+[0;32mI (162317) CAN_ULTRASONIC_CPP: Distância medida: 5.69 cm[0m
+[0;32mI (162317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.69 cm[0m
+[0;32mI (162817) CAN_ULTRASONIC_CPP: Distância medida: 9.02 cm[0m
+[0;32mI (162817) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 9.02 cm[0m
+[0;32mI (163317) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (163317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (163817) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (163817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (164317) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (164317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (164817) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (164817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (165317) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (165317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (165817) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (165817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (166317) CAN_ULTRASONIC_CPP: Distância medida: 126.24 cm[0m
+[0;33mW (166317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (166817) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (166817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (167317) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (167317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (167817) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (167817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (168317) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (168317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (168817) CAN_ULTRASONIC_CPP: Distância medida: 120.07 cm[0m
+[0;33mW (168817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (169317) CAN_ULTRASONIC_CPP: Distância medida: 119.66 cm[0m
+[0;33mW (169317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (169817) CAN_ULTRASONIC_CPP: Distância medida: 123.79 cm[0m
+[0;33mW (169817) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (170317) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (170317) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (170827) CAN_ULTRASONIC_CPP: Distância medida: 205.49 cm[0m
+[0;33mW (170827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (171327) CAN_ULTRASONIC_CPP: Distância medida: 4.75 cm[0m
+[0;32mI (171327) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 4.75 cm[0m
+[0;32mI (171827) CAN_ULTRASONIC_CPP: Distância medida: 3.82 cm[0m
+[0;32mI (171827) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.82 cm[0m
+[0;32mI (172327) CAN_ULTRASONIC_CPP: Distância medida: 3.48 cm[0m
+[0;32mI (172327) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.48 cm[0m
+[0;32mI (172827) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (172827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (173327) CAN_ULTRASONIC_CPP: Distância medida: 120.92 cm[0m
+[0;33mW (173327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (173827) CAN_ULTRASONIC_CPP: Distância medida: 122.55 cm[0m
+[0;33mW (173827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (174327) CAN_ULTRASONIC_CPP: Distância medida: 118.82 cm[0m
+[0;33mW (174327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (174827) CAN_ULTRASONIC_CPP: Distância medida: 117.96 cm[0m
+[0;33mW (174827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (175327) CAN_ULTRASONIC_CPP: Distância medida: 122.97 cm[0m
+[0;33mW (175327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (175827) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (175827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (176327) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (176327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (176827) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (176827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (177327) CAN_ULTRASONIC_CPP: Distância medida: 5.61 cm[0m
+[0;32mI (177327) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 5.61 cm[0m
+[0;32mI (177827) CAN_ULTRASONIC_CPP: Distância medida: 16.19 cm[0m
+[0;32mI (177827) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 16.19 cm[0m
+[0;32mI (178327) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (178327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (178827) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (178827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (179327) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (179327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (179827) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (179827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (180327) CAN_ULTRASONIC_CPP: Distância medida: 118.37 cm[0m
+[0;33mW (180327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (180827) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (180827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (181327) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (181327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (181827) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (181827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (182327) CAN_ULTRASONIC_CPP: Distância medida: 3.82 cm[0m
+[0;32mI (182327) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 3.82 cm[0m
+[0;32mI (182827) CAN_ULTRASONIC_CPP: Distância medida: 122.14 cm[0m
+[0;33mW (182827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (183327) CAN_ULTRASONIC_CPP: Distância medida: 119.66 cm[0m
+[0;33mW (183327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (183827) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (183827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (184327) CAN_ULTRASONIC_CPP: Distância medida: 123.39 cm[0m
+[0;33mW (184327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (184827) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (184827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (185327) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (185327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (185827) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (185827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (186327) CAN_ULTRASONIC_CPP: Distância medida: 120.50 cm[0m
+[0;33mW (186327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (186827) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (186827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (187327) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (187327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (187827) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (187827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (188327) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (188327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (188827) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (188827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (189327) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (189327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (189827) CAN_ULTRASONIC_CPP: Distância medida: 123.38 cm[0m
+[0;33mW (189827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (190327) CAN_ULTRASONIC_CPP: Distância medida: 123.36 cm[0m
+[0;33mW (190327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (190827) CAN_ULTRASONIC_CPP: Distância medida: 4.25 cm[0m
+[0;32mI (190827) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 4.25 cm[0m
+[0;32mI (191327) CAN_ULTRASONIC_CPP: Distância medida: 120.82 cm[0m
+[0;33mW (191327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (191827) CAN_ULTRASONIC_CPP: Distância medida: 122.52 cm[0m
+[0;33mW (191827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (192327) CAN_ULTRASONIC_CPP: Distância medida: 121.66 cm[0m
+[0;33mW (192327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (192827) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (192827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (193327) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (193327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (193827) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (193827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (194327) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (194327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (194827) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (194827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (195327) CAN_ULTRASONIC_CPP: Distância medida: 120.50 cm[0m
+[0;33mW (195327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (195827) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (195827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (196327) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (196327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (196827) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (196827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (197327) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (197327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (197827) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (197827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (198327) CAN_ULTRASONIC_CPP: Distância medida: 121.70 cm[0m
+[0;33mW (198327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (198827) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (198827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (199327) CAN_ULTRASONIC_CPP: Distância medida: 118.78 cm[0m
+[0;33mW (199327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (199827) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (199827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (200327) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (200327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (200827) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (200827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (201327) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (201327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (201827) CAN_ULTRASONIC_CPP: Distância medida: 121.25 cm[0m
+[0;33mW (201827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (202327) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (202327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (202827) CAN_ULTRASONIC_CPP: Distância medida: 126.29 cm[0m
+[0;33mW (202827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (203327) CAN_ULTRASONIC_CPP: Distância medida: 118.39 cm[0m
+[0;33mW (203327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (203827) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (203827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (204327) CAN_ULTRASONIC_CPP: Distância medida: 119.16 cm[0m
+[0;33mW (204327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (204827) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (204827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (205327) CAN_ULTRASONIC_CPP: Distância medida: 120.86 cm[0m
+[0;33mW (205327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (205827) CAN_ULTRASONIC_CPP: Distância medida: 120.43 cm[0m
+[0;33mW (205827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (206327) CAN_ULTRASONIC_CPP: Distância medida: 118.37 cm[0m
+[0;33mW (206327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (206827) CAN_ULTRASONIC_CPP: Distância medida: 121.27 cm[0m
+[0;33mW (206827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (207327) CAN_ULTRASONIC_CPP: Distância medida: 124.56 cm[0m
+[0;33mW (207327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (207827) CAN_ULTRASONIC_CPP: Distância medida: 11.37 cm[0m
+[0;32mI (207827) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 11.37 cm[0m
+[0;32mI (208327) CAN_ULTRASONIC_CPP: Distância medida: 10.02 cm[0m
+[0;32mI (208327) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 10.02 cm[0m
+[0;32mI (208827) CAN_ULTRASONIC_CPP: Distância medida: 126.69 cm[0m
+[0;33mW (208827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (209327) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (209327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (209827) CAN_ULTRASONIC_CPP: Distância medida: 118.37 cm[0m
+[0;33mW (209827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (210327) CAN_ULTRASONIC_CPP: Distância medida: 122.13 cm[0m
+[0;33mW (210327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (210827) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (210827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (211327) CAN_ULTRASONIC_CPP: Distância medida: 120.82 cm[0m
+[0;33mW (211327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (211827) CAN_ULTRASONIC_CPP: Distância medida: 120.82 cm[0m
+[0;33mW (211827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (212327) CAN_ULTRASONIC_CPP: Distância medida: 122.09 cm[0m
+[0;33mW (212327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (212827) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (212827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (213327) CAN_ULTRASONIC_CPP: Distância medida: 124.99 cm[0m
+[0;33mW (213327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (213827) CAN_ULTRASONIC_CPP: Distância medida: 119.57 cm[0m
+[0;33mW (213827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (214327) CAN_ULTRASONIC_CPP: Distância medida: 125.85 cm[0m
+[0;33mW (214327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (214827) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (214827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (215327) CAN_ULTRASONIC_CPP: Distância medida: 126.24 cm[0m
+[0;33mW (215327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (215827) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (215827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (216327) CAN_ULTRASONIC_CPP: Distância medida: 119.23 cm[0m
+[0;33mW (216327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (216827) CAN_ULTRASONIC_CPP: Distância medida: 122.95 cm[0m
+[0;33mW (216827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (217327) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (217327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (217827) CAN_ULTRASONIC_CPP: Distância medida: 120.92 cm[0m
+[0;33mW (217827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (218327) CAN_ULTRASONIC_CPP: Distância medida: 120.50 cm[0m
+[0;33mW (218327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (218827) CAN_ULTRASONIC_CPP: Distância medida: 120.91 cm[0m
+[0;33mW (218827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (219327) CAN_ULTRASONIC_CPP: Distância medida: 118.80 cm[0m
+[0;33mW (219327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (219827) CAN_ULTRASONIC_CPP: Distância medida: 124.66 cm[0m
+[0;33mW (219827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (220327) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (220327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (220827) CAN_ULTRASONIC_CPP: Distância medida: 119.64 cm[0m
+[0;33mW (220827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (221327) CAN_ULTRASONIC_CPP: Distância medida: 129.55 cm[0m
+[0;33mW (221327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (221827) CAN_ULTRASONIC_CPP: Distância medida: 122.52 cm[0m
+[0;33mW (221827) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (222327) CAN_ULTRASONIC_CPP: Distância medida: 126.26 cm[0m
+[0;33mW (222327) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (222837) CAN_ULTRASONIC_CPP: Distância medida: 205.95 cm[0m
+[0;33mW (222837) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (223337) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (223337) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (223837) CAN_ULTRASONIC_CPP: Distância medida: 121.68 cm[0m
+[0;33mW (223837) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (224337) CAN_ULTRASONIC_CPP: Distância medida: 128.73 cm[0m
+[0;33mW (224337) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (224837) CAN_ULTRASONIC_CPP: Distância medida: 120.84 cm[0m
+[0;33mW (224837) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (225337) CAN_ULTRASONIC_CPP: Distância medida: 122.54 cm[0m
+[0;33mW (225337) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;32mI (225837) CAN_ULTRASONIC_CPP: Distância medida: 122.11 cm[0m
+[0;33mW (225837) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (226367) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (226367) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (226367) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (226867) CAN_ULTRASONIC_CPP: Distância medida: 131.61 cm[0m
+[0;33mW (226867) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (227397) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (227397) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (227397) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (227927) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (227927) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (227927) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (228457) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (228457) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (228457) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (228987) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (228987) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (228987) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (229487) CAN_ULTRASONIC_CPP: Distância medida: 22.55 cm[0m
+[0;32mI (229487) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 22.55 cm[0m
+[0;32mI (229987) CAN_ULTRASONIC_CPP: Distância medida: 23.15 cm[0m
+[0;32mI (229987) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 23.15 cm[0m
+[0;32mI (230487) CAN_ULTRASONIC_CPP: Distância medida: 22.38 cm[0m
+[0;32mI (230487) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 22.38 cm[0m
+[0;32mI (230987) CAN_ULTRASONIC_CPP: Distância medida: 23.15 cm[0m
+[0;32mI (230987) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 23.15 cm[0m
+[0;32mI (231487) CAN_ULTRASONIC_CPP: Distância medida: 21.54 cm[0m
+[0;32mI (231487) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 21.54 cm[0m
+[0;32mI (231987) CAN_ULTRASONIC_CPP: Distância medida: 22.40 cm[0m
+[0;32mI (231987) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 22.40 cm[0m
+[0;33mW (232517) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (232517) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (232517) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (233047) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (233047) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (233047) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (233547) CAN_ULTRASONIC_CPP: Distância medida: 127.46 cm[0m
+[0;33mW (233547) CAN_ULTRASONIC_CPP: Distância fora do limite máximo de 50.00 cm. Ignorada.[0m
+[0;33mW (234077) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (234077) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (234077) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (234607) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (234607) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (234607) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (235137) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (235137) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (235137) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (235667) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (235667) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (235667) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (236167) CAN_ULTRASONIC_CPP: Distância medida: 32.65 cm[0m
+[0;32mI (236167) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 32.65 cm[0m
+[0;33mW (236697) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (236697) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (236697) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (237227) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (237227) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (237227) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (237727) CAN_ULTRASONIC_CPP: Distância medida: 26.98 cm[0m
+[0;32mI (237727) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 26.98 cm[0m
+[0;33mW (238257) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (238257) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (238257) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (238757) CAN_ULTRASONIC_CPP: Distância medida: 26.72 cm[0m
+[0;32mI (238757) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 26.72 cm[0m
+[0;33mW (239287) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (239287) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (239287) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (239817) CAN_ULTRASONIC_CPP: Timeout esperando ECHO LOW[0m
+[0;32mI (239817) CAN_ULTRASONIC_CPP: Distância medida: -1.00 cm[0m
+[0;33mW (239817) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (240317) CAN_ULTRASONIC_CPP: Distância medida: 30.05 cm[0m
+[0;32mI (240317) CAN_ULTRASONIC_CPP: Mensagem CAN enviada. ID: 0x123, Distância: 30.05 cm[0m

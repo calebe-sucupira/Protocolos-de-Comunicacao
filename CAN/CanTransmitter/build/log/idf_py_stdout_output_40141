@@ -1,0 +1,164 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 26 2025 16:39:04[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b844h ( 47172) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0001b86c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (106) esp_image: segment 2: paddr=0001b890 vaddr=3ffb0000 size=02438h (  9272) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=0001dcd0 vaddr=40080000 size=02348h (  9032) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=173f4h ( 95220) map[0m
+[0;32mI (158) esp_image: segment 5: paddr=0003741c vaddr=40082348 size=0c244h ( 49732) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     CanTranmitter[0m
+[0;32mI (207) app_init: App version:      2d4743a-dirty[0m
+[0;32mI (212) app_init: Compile time:     May 26 2025 21:48:57[0m
+[0;32mI (217) app_init: ELF file SHA256:  7b1b8a259...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (225) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (229) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (233) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (237) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (243) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (248) heap_init: At 3FFB2D28 len 0002D2D8 (180 KiB): DRAM[0m
+[0;32mI (253) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (264) heap_init: At 4008E58C len 00011A74 (70 KiB): IRAM[0m
+[0;32mI (271) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (299) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (309) CAN_ULTRASONIC_CPP: Resetando MCP2515...[0m
+[0;32mI (419) CAN_ULTRASONIC_CPP: Configurando bitrate...[0m
+[0;32mI (419) CAN_ULTRASONIC_CPP: Bitrate configurado.[0m
+[0;32mI (419) CAN_ULTRASONIC_CPP: Configurando modo normal...[0m
+[0;32mI (419) CAN_ULTRASONIC_CPP: Modo normal configurado.[0m
+[0;32mI (429) CAN_ULTRASONIC_CPP: Distância: 207.45 cm[0m
+[0;33mW (439) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 CF, Dist: 207.45 cm[0m
+[0;32mI (1449) CAN_ULTRASONIC_CPP: Distância: 205.77 cm[0m
+[0;33mW (1449) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 CD, Dist: 205.77 cm[0m
+[0;32mI (2449) CAN_ULTRASONIC_CPP: Distância: 14.17 cm[0m
+[0;33mW (2449) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0E, Dist: 14.17 cm[0m
+[0;32mI (3449) CAN_ULTRASONIC_CPP: Distância: 78.67 cm[0m
+[0;33mW (3449) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 4E, Dist: 78.67 cm[0m
+[0;32mI (4449) CAN_ULTRASONIC_CPP: Distância: 82.06 cm[0m
+[0;33mW (4449) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 52, Dist: 82.06 cm[0m
+[0;33mW (5479) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (5479) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (5479) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (6479) CAN_ULTRASONIC_CPP: Distância: 152.86 cm[0m
+[0;33mW (6479) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 98, Dist: 152.86 cm[0m
+[0;32mI (7489) CAN_ULTRASONIC_CPP: Distância: 80.45 cm[0m
+[0;33mW (7489) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 50, Dist: 80.45 cm[0m
+[0;32mI (8489) CAN_ULTRASONIC_CPP: Distância: 105.46 cm[0m
+[0;33mW (8489) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 69, Dist: 105.46 cm[0m
+[0;32mI (9489) CAN_ULTRASONIC_CPP: Distância: 139.96 cm[0m
+[0;33mW (9489) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 8B, Dist: 139.96 cm[0m
+[0;33mW (10519) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (10519) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (10519) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (11519) CAN_ULTRASONIC_CPP: Distância: 6.26 cm[0m
+[0;33mW (11519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.26 cm[0m
+[0;32mI (12519) CAN_ULTRASONIC_CPP: Distância: 8.47 cm[0m
+[0;33mW (12519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 08, Dist: 8.47 cm[0m
+[0;32mI (13519) CAN_ULTRASONIC_CPP: Distância: 6.86 cm[0m
+[0;33mW (13519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.86 cm[0m
+[0;32mI (14519) CAN_ULTRASONIC_CPP: Distância: 6.96 cm[0m
+[0;33mW (14519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.96 cm[0m
+[0;32mI (15519) CAN_ULTRASONIC_CPP: Distância: 7.89 cm[0m
+[0;33mW (15519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 07, Dist: 7.89 cm[0m
+[0;32mI (16519) CAN_ULTRASONIC_CPP: Distância: 14.66 cm[0m
+[0;33mW (16519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0E, Dist: 14.66 cm[0m
+[0;32mI (17519) CAN_ULTRASONIC_CPP: Distância: 10.34 cm[0m
+[0;33mW (17519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0A, Dist: 10.34 cm[0m
+[0;32mI (18519) CAN_ULTRASONIC_CPP: Distância: 8.21 cm[0m
+[0;33mW (18519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 08, Dist: 8.21 cm[0m
+[0;32mI (19519) CAN_ULTRASONIC_CPP: Distância: 6.17 cm[0m
+[0;33mW (19519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.17 cm[0m
+[0;32mI (20519) CAN_ULTRASONIC_CPP: Distância: 6.86 cm[0m
+[0;33mW (20519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.86 cm[0m
+[0;32mI (21519) CAN_ULTRASONIC_CPP: Distância: 6.11 cm[0m
+[0;33mW (21519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.11 cm[0m
+[0;32mI (22519) CAN_ULTRASONIC_CPP: Distância: 6.02 cm[0m
+[0;33mW (22519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.02 cm[0m
+[0;32mI (23519) CAN_ULTRASONIC_CPP: Distância: 6.79 cm[0m
+[0;33mW (23519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 06, Dist: 6.79 cm[0m
+[0;32mI (24519) CAN_ULTRASONIC_CPP: Distância: 8.40 cm[0m
+[0;33mW (24519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 08, Dist: 8.40 cm[0m
+[0;32mI (25519) CAN_ULTRASONIC_CPP: Distância: 14.42 cm[0m
+[0;33mW (25519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0E, Dist: 14.42 cm[0m
+[0;32mI (26519) CAN_ULTRASONIC_CPP: Distância: 21.20 cm[0m
+[0;33mW (26519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 15, Dist: 21.20 cm[0m
+[0;32mI (27519) CAN_ULTRASONIC_CPP: Distância: 21.63 cm[0m
+[0;33mW (27519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 15, Dist: 21.63 cm[0m
+[0;32mI (28519) CAN_ULTRASONIC_CPP: Distância: 20.70 cm[0m
+[0;33mW (28519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 14, Dist: 20.70 cm[0m
+[0;32mI (29519) CAN_ULTRASONIC_CPP: Distância: 10.94 cm[0m
+[0;33mW (29519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0A, Dist: 10.94 cm[0m
+[0;32mI (30519) CAN_ULTRASONIC_CPP: Distância: 131.85 cm[0m
+[0;33mW (30519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 83, Dist: 131.85 cm[0m
+[0;32mI (31519) CAN_ULTRASONIC_CPP: Distância: 126.91 cm[0m
+[0;33mW (31519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 7E, Dist: 126.91 cm[0m
+[0;32mI (32519) CAN_ULTRASONIC_CPP: Distância: 128.20 cm[0m
+[0;33mW (32519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 80, Dist: 128.20 cm[0m
+[0;32mI (33519) CAN_ULTRASONIC_CPP: Distância: 127.36 cm[0m
+[0;33mW (33519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 7F, Dist: 127.36 cm[0m
+[0;32mI (34519) CAN_ULTRASONIC_CPP: Distância: 131.06 cm[0m
+[0;33mW (34519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 83, Dist: 131.06 cm[0m
+[0;32mI (35519) CAN_ULTRASONIC_CPP: Distância: 127.77 cm[0m
+[0;33mW (35519) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 7F, Dist: 127.77 cm[0m
+[0;32mI (36529) CAN_ULTRASONIC_CPP: Distância: 208.99 cm[0m
+[0;33mW (36529) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 D0, Dist: 208.99 cm[0m
+[0;32mI (37529) CAN_ULTRASONIC_CPP: Distância: 14.49 cm[0m
+[0;33mW (37529) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 0E, Dist: 14.49 cm[0m
+[0;33mW (38559) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (38559) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (38559) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (39589) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (39589) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (39589) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (40619) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (40619) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (40619) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;33mW (41649) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (41649) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (41649) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (42649) CAN_ULTRASONIC_CPP: Distância: 130.24 cm[0m
+[0;33mW (42649) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 82, Dist: 130.24 cm[0m
+[0;32mI (43649) CAN_ULTRASONIC_CPP: Distância: 131.92 cm[0m
+[0;33mW (43649) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 83, Dist: 131.92 cm[0m
+[0;33mW (44679) CAN_ULTRASONIC_CPP: Timeout esperando ECHO ir para LOW[0m
+[0;32mI (44679) CAN_ULTRASONIC_CPP: Distância: -1.00 cm[0m
+[0;33mW (44679) CAN_ULTRASONIC_CPP: Leitura inválida do sensor ultrassônico.[0m
+[0;32mI (45679) CAN_ULTRASONIC_CPP: Distância: 31.11 cm[0m
+[0;33mW (45679) CAN_ULTRASONIC_CPP: Mensagem CAN enviada! ID: 0x123, Dados: 01 1F, Dist: 31.11 cm[0m
+[0;32mI (46679) CAN_ULTRASONIC_CPP: Distância: 127.75 cm[0m

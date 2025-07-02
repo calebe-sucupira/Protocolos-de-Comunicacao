@@ -7,17 +7,13 @@
 
 static const char *TAG = "NFC_URL_WRITER";
 
-// =======================================================
-// --- CONFIGURE A URL QUE VOCÊ QUER GRAVAR AQUI ---
 const char *URL_PARA_GRAVAR = "https://www.ufc.br";
-// =======================================================
 
-// --- CONFIGURAÇÃO DE PINOS PARA A SUA MONTAGEM (VSPI) ---
 #define RC522_SPI_BUS_GPIO_MISO   19
 #define RC522_SPI_BUS_GPIO_MOSI   23
 #define RC522_SPI_BUS_GPIO_SCLK   18
-#define RC522_SPI_SCANNER_GPIO_SDA 5  // Pino CS
-#define RC522_SCANNER_GPIO_RST    4  // Pino RST
+#define RC522_SPI_SCANNER_GPIO_SDA 5  
+#define RC522_SCANNER_GPIO_RST    4  
 
 // Chaves
 static const rc522_mifare_key_t default_key = { .value = { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF } };
@@ -47,9 +43,9 @@ static esp_err_t format_tag(rc522_handle_t scanner, rc522_picc_t *picc) {
         ESP_RETURN_ON_ERROR(rc522_mifare_auth(scanner, picc, trailer_block, &default_key), TAG, "format: auth fail setor %d", i);
         
         uint8_t new_trailer[RC522_MIFARE_BLOCK_SIZE] = {
-            0xD3, 0xF7, 0xD3, 0xF7, 0xD3, 0xF7, // Chave A (NDEF)
-            0xFF, 0x07, 0x80, 0x69,             // Bits de acesso
-            0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF  // Chave B
+            0xD3, 0xF7, 0xD3, 0xF7, 0xD3, 0xF7, 
+            0xFF, 0x07, 0x80, 0x69,             
+            0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF  
         };
         ESP_RETURN_ON_ERROR(rc522_mifare_write(scanner, picc, trailer_block, new_trailer), TAG, "format: write fail setor %d", i);
     }
@@ -67,15 +63,15 @@ static esp_err_t write_url(rc522_handle_t scanner, rc522_picc_t *picc) {
     uint8_t final_buffer_len = tlv_len + 1;
 
     uint8_t buffer[256] = {0};
-    buffer[0] = 0x03; // TLV: NDEF Message
+    buffer[0] = 0x03; 
     buffer[1] = ndef_msg_len;
-    buffer[2] = 0xD1; // NDEF Record Header
-    buffer[3] = 0x01; // Type Name Format: "U" (URI)
+    buffer[2] = 0xD1; 
+    buffer[3] = 0x01; 
     buffer[4] = url_len + 1;
     buffer[5] = 'U';
-    buffer[6] = 0x00; // URI Identifier Code: no prefix
+    buffer[6] = 0x00;
     memcpy(&buffer[7], URL_PARA_GRAVAR, url_len);
-    buffer[final_buffer_len - 1] = 0xFE; // TLV: Terminator
+    buffer[final_buffer_len - 1] = 0xFE; 
 
     ESP_LOGI(TAG, "A escrever URL no cartao...");
     uint32_t bytes_written = 0;
@@ -116,13 +112,11 @@ static void on_picc_state_changed(void *arg, esp_event_base_t base, int32_t even
         return;
     }
 
-    // 1. Tenta formatar o cartão. Isto irá funcionar se o cartão estiver no estado de fábrica.
     if (format_tag(scanner, picc) == ESP_OK) {
         ESP_LOGI(TAG, "Formatacao bem-sucedida. A escrever a URL...");
-        // 2. Se a formatação for bem-sucedida, escreve a URL.
         if (write_url(scanner, picc) == ESP_OK) {
             ESP_LOGI(TAG, "********************************");
-            ESP_LOGI(TAG, "VITORIA! URL gravada com sucesso!");
+            ESP_LOGI(TAG, "URL gravada com sucesso!");
             ESP_LOGI(TAG, "Teste com o seu telemovel.");
             ESP_LOGI(TAG, "********************************");
         } else {
@@ -130,10 +124,9 @@ static void on_picc_state_changed(void *arg, esp_event_base_t base, int32_t even
         }
     } else {
         ESP_LOGW(TAG, "Formatacao falhou. A assumir que o cartao ja esta formatado e a tentar escrever...");
-        // 3. Se a formatação falhar, assume que já está formatado e tenta escrever diretamente.
         if (write_url(scanner, picc) == ESP_OK) {
             ESP_LOGI(TAG, "********************************");
-            ESP_LOGI(TAG, "VITORIA! URL gravada em cartao ja formatado!");
+            ESP_LOGI(TAG, "URL gravada em cartao ja formatado!");
             ESP_LOGI(TAG, "Teste com o seu telemovel.");
             ESP_LOGI(TAG, "********************************");
         } else {

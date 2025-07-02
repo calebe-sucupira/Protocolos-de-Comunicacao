@@ -1,0 +1,637 @@
+ro cpu start user code
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (217) app_init: Applicatio�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jul  2 2025 14:40:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dcb4h ( 56500) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001dcdc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dd00 vaddr=3ffb0000 size=02318h (  8984) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1e648h (124488) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=0003e670 vaddr=3ffb2318 size=001bch (   444) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=0003e834 vaddr=40080000 size=0f148h ( 61768) load[0m
+[0;32mI (198) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (198) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (217) app_init: Application information:[0m
+[0;32mI (217) app_init: Project name:     NFC[0m
+[0;32mI (221) app_init: App version:      00a7564-dirty[0m
+[0;32mI (225) app_init: Compile time:     Jul  2 2025 14:40:32[0m
+[0;32mI (230) app_init: ELF file SHA256:  0b0db4fee...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (242) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (246) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (250) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (256) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFB2DC8 len 0002D238 (180 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (272) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 4008F148 len 00010EB8 (67 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (286) spi_flash: flash io: dio[0m
+[0;33mW (289) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (352) rc522: PCD (fw=v2.0) initialized[0m
+[0;32mI (352) NFC_WRITER: =======================================[0m
+[0;32mI (352) NFC_WRITER:   ESCRITOR NFC INICIADO[0m
+[0;32mI (352) NFC_WRITER:   Sempre limpa e escreve URL[0m
+[0;32mI (352) NFC_WRITER:   URL: https://www.ufc.br[0m
+[0;32mI (362) NFC_WRITER:   Aproxime um cartao MIFARE Classic[0m
+[0;32mI (362) NFC_WRITER: =======================================[0m
+[0;32mI (372) main_task: Returned from app_main()[0m
+[1;31mE (3752) rc522: rc522_picc_transceive(206): F523[0m
+[0;32mI (3872) NFC_WRITER: ===================================[0m
+[0;32mI (3872) NFC_WRITER: CARTAO DETECTADO![0m
+[0;32mI (3872) rc522: [0m
+[0;32mI (3872) rc522: ╔══════════════╗[0m
+[0;32mI (3872) rc522: ║              ║ Type: MIFARE 1K[0m
+[0;32mI (3882) rc522: ║     RFID     ║ UID:  10 A2 7E 1B[0m
+[0;32mI (3882) rc522: ║     CARD     ║ ATQA: 0x0400[0m
+[0;32mI (3892) rc522: ║              ║ SAK:  0x08[0m
+[0;32mI (3892) rc522: ╚══════════════╝[0m
+[0;32mI (3902) rc522: [0m
+[0;32mI (3902) NFC_WRITER: Preparando o cartao...[0m
+[0;32mI (3902) NFC_WRITER: Tipo: MIFARE Classic 1K (16 setores)[0m
+[0;33mW (3962) NFC_WRITER: Falha na autenticacao setor 1[0m
+[0;33mW (4012) NFC_WRITER: Falha na autenticacao setor 2[0m
+[0;33mW (4062) NFC_WRITER: Falha na autenticacao setor 3[0m
+[0;33mW (4122) NFC_WRITER: Falha na autenticacao setor 4[0m
+[0;33mW (4172) NFC_WRITER: Falha na autenticacao setor 5[0m
+[0;33mW (4222) NFC_WRITER: Falha na autenticacao setor 6[0m
+[0;33mW (4272) NFC_WRITER: Falha na autenticacao setor 7[0m
+[0;33mW (4322) NFC_WRITER: Falha na autenticacao setor 8[0m
+[0;33mW (4372) NFC_WRITER: Falha na autenticacao setor 9[0m
+[0;33mW (4422) NFC_WRITER: Falha na autenticacao setor 10[0m
+[0;33mW (4472) NFC_WRITER: Falha na autenticacao setor 11[0m
+[0;33mW (4532) NFC_WRITER: Falha na autenticacao setor 12[0m
+[0;33mW (4582) NFC_WRITER: Falha na autenticacao setor 13[0m
+[0;33mW (4632) NFC_WRITER: Falha na autenticacao setor 14[0m
+[0;33mW (4682) NFC_WRITER: Falha na autenticacao setor 15[0m
+[0;32mI (4682) NFC_WRITER: Preparacao concluida![0m
+[0;32mI (4682) NFC_WRITER: Escrevendo URL: https://www.ufc.br[0m
+[0;33mW (4712) NFC_WRITER: Falha na autenticacao bloco 4[0m
+[0;33mW (4732) NFC_WRITER: Falha na autenticacao bloco 5[0m
+[0;33mW (4762) NFC_WRITER: Falha na autenticacao bloco 6[0m
+[0;33mW (4782) NFC_WRITER: Falha na autenticacao bloco 8[0m
+[0;33mW (4812) NFC_WRITER: Falha na autenticacao bloco 9[0m
+[0;33mW (4842) NFC_WRITER: Falha na autenticacao bloco 10[0m
+[0;33mW (4862) NFC_WRITER: Falha na autenticacao bloco 12[0m
+[0;33mW (4892) NFC_WRITER: Falha na autenticacao bloco 13[0m
+[0;33mW (4912) NFC_WRITER: Falha na autenticacao bloco 14[0m
+[0;33mW (4942) NFC_WRITER: Falha na autenticacao bloco 16[0m
+[0;33mW (4962) NFC_WRITER: Falha na autenticacao bloco 17[0m
+[0;33mW (4992) NFC_WRITER: Falha na autenticacao bloco 18[0m
+[0;33mW (5022) NFC_WRITER: Falha na autenticacao bloco 20[0m
+[0;33mW (5042) NFC_WRITER: Falha na autenticacao bloco 21[0m
+[0;33mW (5072) NFC_WRITER: Falha na autenticacao bloco 22[0m
+[0;33mW (5092) NFC_WRITER: Falha na autenticacao bloco 24[0m
+[0;33mW (5122) NFC_WRITER: Falha na autenticacao bloco 25[0m
+[0;33mW (5142) NFC_WRITER: Falha na autenticacao bloco 26[0m
+[0;33mW (5172) NFC_WRITER: Falha na autenticacao bloco 28[0m
+[0;33mW (5202) NFC_WRITER: Falha na autenticacao bloco 29[0m
+[0;33mW (5222) NFC_WRITER: Falha na autenticacao bloco 30[0m
+[0;33mW (5252) NFC_WRITER: Falha na autenticacao bloco 32[0m
+[0;33mW (5272) NFC_WRITER: Falha na autenticacao bloco 33[0m
+[0;33mW (5302) NFC_WRITER: Falha na autenticacao bloco 34[0m
+[0;33mW (5322) NFC_WRITER: Falha na autenticacao bloco 36[0m
+[0;33mW (5352) NFC_WRITER: Falha na autenticacao bloco 37[0m
+[0;33mW (5382) NFC_WRITER: Falha na autenticacao bloco 38[0m
+[0;33mW (5402) NFC_WRITER: Falha na autenticacao bloco 40[0m
+[0;33mW (5432) NFC_WRITER: Falha na autenticacao bloco 41[0m
+[0;33mW (5452) NFC_WRITER: Falha na autenticacao bloco 42[0m
+[0;33mW (5482) NFC_WRITER: Falha na autenticacao bloco 44[0m
+[0;33mW (5502) NFC_WRITER: Falha na autenticacao bloco 45[0m
+[0;33mW (5532) NFC_WRITER: Falha na autenticacao bloco 46[0m
+[0;33mW (5562) NFC_WRITER: Falha na autenticacao bloco 48[0m
+[0;33mW (5582) NFC_WRITER: Falha na autenticacao bloco 49[0m
+[0;33mW (5612) NFC_WRITER: Falha na autenticacao bloco 50[0m
+[0;33mW (5632) NFC_WRITER: Falha na autenticacao bloco 52[0m
+[0;33mW (5662) NFC_WRITER: Falha na autenticacao bloco 53[0m
+[0;33mW (5682) NFC_WRITER: Falha na autenticacao bloco 54[0m
+[0;33mW (5712) NFC_WRITER: Falha na autenticacao bloco 56[0m
+[0;33mW (5742) NFC_WRITER: Falha na autenticacao bloco 57[0m
+[0;33mW (5762) NFC_WRITER: Falha na autenticacao bloco 58[0m
+[0;33mW (5792) NFC_WRITER: Falha na autenticacao bloco 60[0m
+[0;33mW (5812) NFC_WRITER: Falha na autenticacao bloco 61[0m
+[0;33mW (5842) NFC_WRITER: Falha na autenticacao bloco 62[0m
+[0;33mW (5862) NFC_WRITER: Falha na autenticacao bloco 64[0m
+[0;33mW (5892) NFC_WRITER: Falha na autenticacao bloco 65[0m
+[0;33mW (5922) NFC_WRITER: Falha na autenticacao bloco 66[0m
+[0;33mW (5942) NFC_WRITER: Falha na autenticacao bloco 68[0m
+[0;33mW (5972) NFC_WRITER: Falha na autenticacao bloco 69[0m
+[0;33mW (5992) NFC_WRITER: Falha na autenticacao bloco 70[0m
+[0;33mW (6022) NFC_WRITER: Falha na autenticacao bloco 72[0m
+[0;33mW (6042) NFC_WRITER: Falha na autenticacao bloco 73[0m
+[0;33mW (6072) NFC_WRITER: Falha na autenticacao bloco 74[0m
+[0;33mW (6092) NFC_WRITER: Falha na autenticacao bloco 76[0m
+[0;33mW (6122) NFC_WRITER: Falha na autenticacao bloco 77[0m
+[0;33mW (6152) NFC_WRITER: Falha na autenticacao bloco 78[0m
+[0;33mW (6172) NFC_WRITER: Falha na autenticacao bloco 80[0m
+[0;33mW (6202) NFC_WRITER: Falha na autenticacao bloco 81[0m
+[0;33mW (6222) NFC_WRITER: Falha na autenticacao bloco 82[0m
+[0;33mW (6252) NFC_WRITER: Falha na autenticacao bloco 84[0m
+[0;33mW (6272) NFC_WRITER: Falha na autenticacao bloco 85[0m
+[0;33mW (6302) NFC_WRITER: Falha na autenticacao bloco 86[0m
+[0;33mW (6332) NFC_WRITER: Falha na autenticacao bloco 88[0m
+[0;33mW (6352) NFC_WRITER: Falha na autenticacao bloco 89[0m
+[0;33mW (6382) NFC_WRITER: Falha na autenticacao bloco 90[0m
+[0;33mW (6402) NFC_WRITER: Falha na autenticacao bloco 92[0m
+[0;33mW (6432) NFC_WRITER: Falha na autenticacao bloco 93[0m
+[0;33mW (6452) NFC_WRITER: Falha na autenticacao bloco 94[0m
+[0;33mW (6482) NFC_WRITER: Falha na autenticacao bloco 96[0m
+[0;33mW (6512) NFC_WRITER: Falha na autenticacao bloco 97[0m
+[0;33mW (6532) NFC_WRITER: Falha na autenticacao bloco 98[0m
+[0;33mW (6562) NFC_WRITER: Falha na autenticacao bloco 100[0m
+[0;33mW (6582) NFC_WRITER: Falha na autenticacao bloco 101[0m
+[0;33mW (6612) NFC_WRITER: Falha na autenticacao bloco 102[0m
+[0;33mW (6632) NFC_WRITER: Falha na autenticacao bloco 104[0m
+[0;33mW (6662) NFC_WRITER: Falha na autenticacao bloco 105[0m
+[0;33mW (6692) NFC_WRITER: Falha na autenticacao bloco 106[0m
+[0;33mW (6712) NFC_WRITER: Falha na autenticacao bloco 108[0m
+[0;33mW (6742) NFC_WRITER: Falha na autenticacao bloco 109[0m
+[0;33mW (6762) NFC_WRITER: Falha na autenticacao bloco 110[0m
+[0;33mW (6792) NFC_WRITER: Falha na autenticacao bloco 112[0m
+[0;33mW (6812) NFC_WRITER: Falha na autenticacao bloco 113[0m
+[0;33mW (6842) NFC_WRITER: Falha na autenticacao bloco 114[0m
+[0;33mW (6872) NFC_WRITER: Falha na autenticacao bloco 116[0m
+[0;33mW (6892) NFC_WRITER: Falha na autenticacao bloco 117[0m
+[0;33mW (6922) NFC_WRITER: Falha na autenticacao bloco 118[0m
+[0;33mW (6942) NFC_WRITER: Falha na autenticacao bloco 120[0m
+[0;33mW (6972) NFC_WRITER: Falha na autenticacao bloco 121[0m
+[0;33mW (6992) NFC_WRITER: Falha na autenticacao bloco 122[0m
+[0;33mW (7022) NFC_WRITER: Falha na autenticacao bloco 124[0m
+[0;33mW (7052) NFC_WRITER: Falha na autenticacao bloco 125[0m
+[0;33mW (7072) NFC_WRITER: Falha na autenticacao bloco 126[0m
+[0;33mW (7102) NFC_WRITER: Falha na autenticacao bloco 128[0m
+[0;33mW (7122) NFC_WRITER: Falha na autenticacao bloco 129[0m
+[0;33mW (7152) NFC_WRITER: Falha na autenticacao bloco 130[0m
+[0;33mW (7172) NFC_WRITER: Falha na autenticacao bloco 132[0m
+[0;33mW (7202) NFC_WRITER: Falha na autenticacao bloco 133[0m
+[0;33mW (7232) NFC_WRITER: Falha na autenticacao bloco 134[0m
+[0;33mW (7252) NFC_WRITER: Falha na autenticacao bloco 136[0m
+[0;33mW (7282) NFC_WRITER: Falha na autenticacao bloco 137[0m
+[0;33mW (7302) NFC_WRITER: Falha na autenticacao bloco 138[0m
+[0;33mW (7332) NFC_WRITER: Falha na autenticacao bloco 140[0m
+[0;33mW (7352) NFC_WRITER: Falha na autenticacao bloco 141[0m
+[0;33mW (7382) NFC_WRITER: Falha na autenticacao bloco 142[0m
+[0;33mW (7412) NFC_WRITER: Falha na autenticacao bloco 144[0m
+[0;33mW (7432) NFC_WRITER: Falha na autenticacao bloco 145[0m
+[0;33mW (7462) NFC_WRITER: Falha na autenticacao bloco 146[0m
+[0;33mW (7482) NFC_WRITER: Falha na autenticacao bloco 148[0m
+[0;33mW (7512) NFC_WRITER: Falha na autenticacao bloco 149[0m
+[0;33mW (7532) NFC_WRITER: Falha na autenticacao bloco 150[0m
+[0;33mW (7562) NFC_WRITER: Falha na autenticacao bloco 152[0m
+[0;33mW (7582) NFC_WRITER: Falha na autenticacao bloco 153[0m
+[0;33mW (7612) NFC_WRITER: Falha na autenticacao bloco 154[0m
+[0;33mW (7642) NFC_WRITER: Falha na autenticacao bloco 156[0m
+[0;33mW (7662) NFC_WRITER: Falha na autenticacao bloco 157[0m
+[0;33mW (7692) NFC_WRITER: Falha na autenticacao bloco 158[0m
+[0;33mW (7712) NFC_WRITER: Falha na autenticacao bloco 160[0m
+[0;33mW (7742) NFC_WRITER: Falha na autenticacao bloco 161[0m
+[0;33mW (7762) NFC_WRITER: Falha na autenticacao bloco 162[0m
+[0;33mW (7792) NFC_WRITER: Falha na autenticacao bloco 164[0m
+[0;33mW (7822) NFC_WRITER: Falha na autenticacao bloco 165[0m
+[0;33mW (7842) NFC_WRITER: Falha na autenticacao bloco 166[0m
+[0;33mW (7872) NFC_WRITER: Falha na autenticacao bloco 168[0m
+[0;33mW (7892) NFC_WRITER: Falha na autenticacao bloco 169[0m
+[0;33mW (7922) NFC_WRITER: Falha na autenticacao bloco 170[0m
+[0;33mW (7942) NFC_WRITER: Falha na autenticacao bloco 172[0m
+[0;33mW (7972) NFC_WRITER: Falha na autenticacao bloco 173[0m
+[0;33mW (8002) NFC_WRITER: Falha na autenticacao bloco 174[0m
+[0;33mW (8022) NFC_WRITER: Falha na autenticacao bloco 176[0m
+[0;33mW (8052) NFC_WRITER: Falha na autenticacao bloco 177[0m
+[0;33mW (8072) NFC_WRITER: Falha na autenticacao bloco 178[0m
+[0;33mW (8102) NFC_WRITER: Falha na autenticacao bloco 180[0m
+[0;33mW (8122) NFC_WRITER: Falha na autenticacao bloco 181[0m
+[0;33mW (8152) NFC_WRITER: Falha na autenticacao bloco 182[0m
+[0;33mW (8182) NFC_WRITER: Falha na autenticacao bloco 184[0m
+[0;33mW (8202) NFC_WRITER: Falha na autenticacao bloco 185[0m
+[0;33mW (8232) NFC_WRITER: Falha na autenticacao bloco 186[0m
+[0;33mW (8252) NFC_WRITER: Falha na autenticacao bloco 188[0m
+[0;33mW (8282) NFC_WRITER: Falha na autenticacao bloco 189[0m
+[0;33mW (8302) NFC_WRITER: Falha na autenticacao bloco 190[0m
+[0;33mW (8332) NFC_WRITER: Falha na autenticacao bloco 192[0m
+[0;33mW (8362) NFC_WRITER: Falha na autenticacao bloco 193[0m
+[0;33mW (8382) NFC_WRITER: Falha na autenticacao bloco 194[0m
+[0;33mW (8412) NFC_WRITER: Falha na autenticacao bloco 196[0m
+[0;33mW (8432) NFC_WRITER: Falha na autenticacao bloco 197[0m
+[0;33mW (8462) NFC_WRITER: Falha na autenticacao bloco 198[0m
+[0;33mW (8482) NFC_WRITER: Falha na autenticacao bloco 200[0m
+[0;33mW (8512) NFC_WRITER: Falha na autenticacao bloco 201[0m
+[0;33mW (8542) NFC_WRITER: Falha na autenticacao bloco 202[0m
+[0;33mW (8562) NFC_WRITER: Falha na autenticacao bloco 204[0m
+[0;33mW (8592) NFC_WRITER: Falha na autenticacao bloco 205[0m
+[0;33mW (8612) NFC_WRITER: Falha na autenticacao bloco 206[0m
+[0;33mW (8642) NFC_WRITER: Falha na autenticacao bloco 208[0m
+[0;33mW (8662) NFC_WRITER: Falha na autenticacao bloco 209[0m
+[0;33mW (8692) NFC_WRITER: Falha na autenticacao bloco 210[0m
+[0;33mW (8722) NFC_WRITER: Falha na autenticacao bloco 212[0m
+[0;33mW (8742) NFC_WRITER: Falha na autenticacao bloco 213[0m
+[0;33mW (8772) NFC_WRITER: Falha na autenticacao bloco 214[0m
+[0;33mW (8792) NFC_WRITER: Falha na autenticacao bloco 216[0m
+[0;33mW (8822) NFC_WRITER: Falha na autenticacao bloco 217[0m
+[0;33mW (8842) NFC_WRITER: Falha na autenticacao bloco 218[0m
+[1;31mE (8862) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (8862) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (8862) task_wdt: Tasks currently running:[0m
+[1;31mE (8862) task_wdt: CPU 0: rc522_polling_t[0m
+[1;31mE (8862) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (8862) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DCD8E:0x3FFB1100 0x400DD150:0x3FFB1120 0x400830F9:0x3FFB1150 0x4000BFED:0x3FFB5C00 0x4008796A:0x3FFB5C10 0x4008701F:0x3FFB5C30 0x40082B61:0x3FFB5C70 0x40082C11:0x3FFB5CA0 0x400D4395:0x3FFB5CC0 0x40082CA6:0x3FFB5CE0 0x400E03C9:0x3FFB5D00 0x400D7AD5:0x3FFB5D20 0x400D8F12:0x3FFB5D50 0x400D9FD7:0x3FFB5D90 0x400D71C4:0x3FFB5DE0 0x400D72BC:0x3FFB5F20 0x400D735A:0x3FFB5F40 0x400ED4F1:0x3FFB5F60 0x400ED119:0x3FFB5F90 0x400D7AC2:0x3FFB5FD0 0x400D995D:0x3FFB6000 0x400D7681:0x3FFB6040 0x400875D1:0x3FFB6080
+
+[1;31mE (8922) rc522: rc522_picc_send(86): [0m
+[0;33mW (8922) NFC_WRITER: Falha na autenticacao bloco 220[0m
+[0;33mW (8952) NFC_WRITER: Falha na autenticacao bloco 221[0m
+[0;33mW (8982) NFC_WRITER: Falha na autenticacao bloco 222[0m
+[0;33mW (9002) NFC_WRITER: Falha na autenticacao bloco 224[0m
+W (9032) NFC_WRITER: Falha na autenticacao bloco 225
+[0;33mW (9052) NFC_WRITER: Falha na autenticacao bloco 226[0m
+[0;33mW (9082) NFC_WRITER: Falha na autenticacao bloco 228[0m
+[0;33mW (9112) NFC_WRITER: Falha na autenticacao bloco 229[0m
+[0;33mW (9132) NFC_WRITER: Falha na autenticacao bloco 230[0m
+[0;33mW (9162) NFC_WRITER: Falha na autenticacao bloco 232[0m
+[0;33mW (9182) NFC_WRITER: Falha na autenticacao bloco 233[0m
+[0;33mW (9212) NFC_WRITER: Falha na autenticacao bloco 234[0m
+[0;33mW (9232) NFC_WRITER: Falha na autenticacao bloco 236[0m
+[0;33mW (9262) NFC_WRITER: Falha na autenticacao bloco 237[0m
+[0;33mW (9292) NFC_WRITER: Falha na autenticacao bloco 238[0m
+[0;33mW (9312) NFC_WRITER: Falha na autenticacao bloco 240[0m
+[0;33mW (9342) NFC_WRITER: Falha na autenticacao bloco 241[0m
+[0;33mW (9362) NFC_WRITER: Falha na autenticacao bloco 242[0m
+[0;33mW (9392) NFC_WRITER: Falha na autenticacao bloco 244[0m
+[0;33mW (9412) NFC_WRITER: Falha na autenticacao bloco 245[0m
+[0;33mW (9442) NFC_WRITER: Falha na autenticacao bloco 246[0m
+[0;33mW (9472) NFC_WRITER: Falha na autenticacao bloco 248[0m
+[0;33mW (9492) NFC_WRITER: Falha na autenticacao bloco 249[0m
+[0;33mW (9522) NFC_WRITER: Falha na autenticacao bloco 250[0m
+[0;33mW (9542) NFC_WRITER: Falha na autenticacao bloco 252[0m
+[0;33mW (9572) NFC_WRITER: Falha na autenticacao bloco 253[0m
+[0;33mW (9592) NFC_WRITER: Falha na autenticacao bloco 254[0m
+[0;33mW (9622) NFC_WRITER: Falha na autenticacao bloco 0[0m
+[0;33mW (9652) NFC_WRITER: Falha na autenticacao bloco 1[0m
+[0;33mW (9672) NFC_WRITER: Falha na autenticacao bloco 2[0m
+[0;33mW (9702) NFC_WRITER: Falha na autenticacao bloco 4[0m
+[0;33mW (9722) NFC_WRITER: Falha na autenticacao bloco 5[0m
+[0;33mW (9752) NFC_WRITER: Falha na autenticacao bloco 6[0m
+[0;33mW (9772) NFC_WRITER: Falha na autenticacao bloco 8[0m
+[0;33mW (9802) NFC_WRITER: Falha na autenticacao bloco 9[0m
+[0;33mW (9832) NFC_WRITER: Falha na autenticacao bloco 10[0m
+[0;33mW (9852) NFC_WRITER: Falha na autenticacao bloco 12[0m
+[0;33mW (9882) NFC_WRITER: Falha na autenticacao bloco 13[0m
+[0;33mW (9902) NFC_WRITER: Falha na autenticacao bloco 14[0m
+[0;33mW (9932) NFC_WRITER: Falha na autenticacao bloco 16[0m
+[0;33mW (9952) NFC_WRITER: Falha na autenticacao bloco 17[0m
+[0;33mW (9982) NFC_WRITER: Falha na autenticacao bloco 18[0m
+[0;33mW (10012) NFC_WRITER: Falha na autenticacao bloco 20[0m
+[0;33mW (10032) NFC_WRITER: Falha na autenticacao bloco 21[0m
+[0;33mW (10062) NFC_WRITER: Falha na autenticacao bloco 22[0m
+[0;33mW (10082) NFC_WRITER: Falha na autenticacao bloco 24[0m
+[0;33mW (10112) NFC_WRITER: Falha na autenticacao bloco 25[0m
+[0;33mW (10132) NFC_WRITER: Falha na autenticacao bloco 26[0m
+[0;33mW (10162) NFC_WRITER: Falha na autenticacao bloco 28[0m
+[0;33mW (10192) NFC_WRITER: Falha na autenticacao bloco 29[0m
+[0;33mW (10212) NFC_WRITER: Falha na autenticacao bloco 30[0m
+[0;33mW (10242) NFC_WRITER: Falha na autenticacao bloco 32[0m
+[0;33mW (10262) NFC_WRITER: Falha na autenticacao bloco 33[0m
+[0;33mW (10292) NFC_WRITER: Falha na autenticacao bloco 34[0m
+[0;33mW (10312) NFC_WRITER: Falha na autenticacao bloco 36[0m
+[0;33mW (10342) NFC_WRITER: Falha na autenticacao bloco 37[0m
+[0;33mW (10372) NFC_WRITER: Falha na autenticacao bloco 38[0m
+[0;33mW (10392) NFC_WRITER: Falha na autenticacao bloco 40[0m
+[0;33mW (10422) NFC_WRITER: Falha na autenticacao bloco 41[0m
+[0;33mW (10442) NFC_WRITER: Falha na autenticacao bloco 42[0m
+[0;33mW (10472) NFC_WRITER: Falha na autenticacao bloco 44[0m
+[0;33mW (10492) NFC_WRITER: Falha na autenticacao bloco 45[0m
+[0;33mW (10522) NFC_WRITER: Falha na autenticacao bloco 46[0m
+[0;33mW (10542) NFC_WRITER: Falha na autenticacao bloco 48[0m
+[0;33mW (10572) NFC_WRITER: Falha na autenticacao bloco 49[0m
+[0;33mW (10602) NFC_WRITER: Falha na autenticacao bloco 50[0m
+[0;33mW (10622) NFC_WRITER: Falha na autenticacao bloco 52[0m
+[0;33mW (10652) NFC_WRITER: Falha na autenticacao bloco 53[0m
+[0;33mW (10672) NFC_WRITER: Falha na autenticacao bloco 54[0m
+[0;33mW (10702) NFC_WRITER: Falha na autenticacao bloco 56[0m
+[0;33mW (10722) NFC_WRITER: Falha na autenticacao bloco 57[0m
+[0;33mW (10752) NFC_WRITER: Falha na autenticacao bloco 58[0m
+[0;33mW (10782) NFC_WRITER: Falha na autenticacao bloco 60[0m
+[0;33mW (10802) NFC_WRITER: Falha na autenticacao bloco 61[0m
+[0;33mW (10832) NFC_WRITER: Falha na autenticacao bloco 62[0m
+[0;33mW (10852) NFC_WRITER: Falha na autenticacao bloco 64[0m
+[0;33mW (10882) NFC_WRITER: Falha na autenticacao bloco 65[0m
+[0;33mW (10902) NFC_WRITER: Falha na autenticacao bloco 66[0m
+[0;33mW (10932) NFC_WRITER: Falha na autenticacao bloco 68[0m
+[0;33mW (10962) NFC_WRITER: Falha na autenticacao bloco 69[0m
+[0;33mW (10982) NFC_WRITER: Falha na autenticacao bloco 70[0m
+[0;33mW (11012) NFC_WRITER: Falha na autenticacao bloco 72[0m
+[0;33mW (11032) NFC_WRITER: Falha na autenticacao bloco 73[0m
+[0;33mW (11062) NFC_WRITER: Falha na autenticacao bloco 74[0m
+[0;33mW (11082) NFC_WRITER: Falha na autenticacao bloco 76[0m
+[0;33mW (11112) NFC_WRITER: Falha na autenticacao bloco 77[0m
+[0;33mW (11142) NFC_WRITER: Falha na autenticacao bloco 78[0m
+[0;33mW (11162) NFC_WRITER: Falha na autenticacao bloco 80[0m
+[0;33mW (11192) NFC_WRITER: Falha na autenticacao bloco 81[0m
+[0;33mW (11212) NFC_WRITER: Falha na autenticacao bloco 82[0m
+[0;33mW (11242) NFC_WRITER: Falha na autenticacao bloco 84[0m
+[0;33mW (11262) NFC_WRITER: Falha na autenticacao bloco 85[0m
+[0;33mW (11292) NFC_WRITER: Falha na autenticacao bloco 86[0m
+[0;33mW (11322) NFC_WRITER: Falha na autenticacao bloco 88[0m
+[0;33mW (11342) NFC_WRITER: Falha na autenticacao bloco 89[0m
+[0;33mW (11372) NFC_WRITER: Falha na autenticacao bloco 90[0m
+[0;33mW (11392) NFC_WRITER: Falha na autenticacao bloco 92[0m
+[0;33mW (11422) NFC_WRITER: Falha na autenticacao bloco 93[0m
+[0;33mW (11442) NFC_WRITER: Falha na autenticacao bloco 94[0m
+[0;33mW (11472) NFC_WRITER: Falha na autenticacao bloco 96[0m
+[0;33mW (11502) NFC_WRITER: Falha na autenticacao bloco 97[0m
+[0;33mW (11522) NFC_WRITER: Falha na autenticacao bloco 98[0m
+[0;33mW (11552) NFC_WRITER: Falha na autenticacao bloco 100[0m
+[0;33mW (11572) NFC_WRITER: Falha na autenticacao bloco 101[0m
+[0;33mW (11602) NFC_WRITER: Falha na autenticacao bloco 102[0m
+[0;33mW (11622) NFC_WRITER: Falha na autenticacao bloco 104[0m
+[0;33mW (11652) NFC_WRITER: Falha na autenticacao bloco 105[0m
+[0;33mW (11682) NFC_WRITER: Falha na autenticacao bloco 106[0m
+[0;33mW (11702) NFC_WRITER: Falha na autenticacao bloco 108[0m
+[0;33mW (11732) NFC_WRITER: Falha na autenticacao bloco 109[0m
+[0;33mW (11752) NFC_WRITER: Falha na autenticacao bloco 110[0m
+[0;33mW (11782) NFC_WRITER: Falha na autenticacao bloco 112[0m
+[0;33mW (11802) NFC_WRITER: Falha na autenticacao bloco 113[0m
+[0;33mW (11832) NFC_WRITER: Falha na autenticacao bloco 114[0m
+[0;33mW (11862) NFC_WRITER: Falha na autenticacao bloco 116[0m
+[0;33mW (11882) NFC_WRITER: Falha na autenticacao bloco 117[0m
+[0;33mW (11912) NFC_WRITER: Falha na autenticacao bloco 118[0m
+[0;33mW (11932) NFC_WRITER: Falha na autenticacao bloco 120[0m
+[0;33mW (11962) NFC_WRITER: Falha na autenticacao bloco 121[0m
+[0;33mW (11982) NFC_WRITER: Falha na autenticacao bloco 122[0m
+[0;33mW (12012) NFC_WRITER: Falha na autenticacao bloco 124[0m
+[0;33mW (12042) NFC_WRITER: Falha na autenticacao bloco 125[0m
+[0;33mW (12062) NFC_WRITER: Falha na autenticacao bloco 126[0m
+[0;33mW (12092) NFC_WRITER: Falha na autenticacao bloco 128[0m
+[0;33mW (12112) NFC_WRITER: Falha na autenticacao bloco 129[0m
+[0;33mW (12142) NFC_WRITER: Falha na autenticacao bloco 130[0m
+[0;33mW (12162) NFC_WRITER: Falha na autenticacao bloco 132[0m
+[0;33mW (12192) NFC_WRITER: Falha na autenticacao bloco 133[0m
+[0;33mW (12212) NFC_WRITER: Falha na autenticacao bloco 134[0m
+[0;33mW (12242) NFC_WRITER: Falha na autenticacao bloco 136[0m
+[0;33mW (12272) NFC_WRITER: Falha na autenticacao bloco 137[0m
+[0;33mW (12292) NFC_WRITER: Falha na autenticacao bloco 138[0m
+[0;33mW (12322) NFC_WRITER: Falha na autenticacao bloco 140[0m
+[0;33mW (12342) NFC_WRITER: Falha na autenticacao bloco 141[0m
+[0;33mW (12372) NFC_WRITER: Falha na autenticacao bloco 142[0m
+[0;33mW (12392) NFC_WRITER: Falha na autenticacao bloco 144[0m
+[0;33mW (12422) NFC_WRITER: Falha na autenticacao bloco 145[0m
+[0;33mW (12452) NFC_WRITER: Falha na autenticacao bloco 146[0m
+[0;33mW (12472) NFC_WRITER: Falha na autenticacao bloco 148[0m
+[0;33mW (12502) NFC_WRITER: Falha na autenticacao bloco 149[0m
+[0;33mW (12522) NFC_WRITER: Falha na autenticacao bloco 150[0m
+[0;33mW (12552) NFC_WRITER: Falha na autenticacao bloco 152[0m
+[0;33mW (12572) NFC_WRITER: Falha na autenticacao bloco 153[0m
+[0;33mW (12602) NFC_WRITER: Falha na autenticacao bloco 154[0m
+[0;33mW (12632) NFC_WRITER: Falha na autenticacao bloco 156[0m
+[0;33mW (12652) NFC_WRITER: Falha na autenticacao bloco 157[0m
+[0;33mW (12682) NFC_WRITER: Falha na autenticacao bloco 158[0m
+[0;33mW (12702) NFC_WRITER: Falha na autenticacao bloco 160[0m
+[0;33mW (12732) NFC_WRITER: Falha na autenticacao bloco 161[0m
+[0;33mW (12752) NFC_WRITER: Falha na autenticacao bloco 162[0m
+[0;33mW (12782) NFC_WRITER: Falha na autenticacao bloco 164[0m
+[0;33mW (12812) NFC_WRITER: Falha na autenticacao bloco 165[0m
+[0;33mW (12832) NFC_WRITER: Falha na autenticacao bloco 166[0m
+[0;33mW (12862) NFC_WRITER: Falha na autenticacao bloco 168[0m
+[0;33mW (12882) NFC_WRITER: Falha na autenticacao bloco 169[0m
+[0;33mW (12912) NFC_WRITER: Falha na autenticacao bloco 170[0m
+[0;33mW (12932) NFC_WRITER: Falha na autenticacao bloco 172[0m
+[0;33mW (12962) NFC_WRITER: Falha na autenticacao bloco 173[0m
+[0;33mW (12992) NFC_WRITER: Falha na autenticacao bloco 174[0m
+[0;33mW (13012) NFC_WRITER: Falha na autenticacao bloco 176[0m
+[0;33mW (13042) NFC_WRITER: Falha na autenticacao bloco 177[0m
+[0;33mW (13062) NFC_WRITER: Falha na autenticacao bloco 178[0m
+[0;33mW (13092) NFC_WRITER: Falha na autenticacao bloco 180[0m
+[0;33mW (13112) NFC_WRITER: Falha na autenticacao bloco 181[0m
+[0;33mW (13142) NFC_WRITER: Falha na autenticacao bloco 182[0m
+[0;33mW (13172) NFC_WRITER: Falha na autenticacao bloco 184[0m
+[0;33mW (13192) NFC_WRITER: Falha na autenticacao bloco 185[0m
+[0;33mW (13222) NFC_WRITER: Falha na autenticacao bloco 186[0m
+[0;33mW (13242) NFC_WRITER: Falha na autenticacao bloco 188[0m
+[0;33mW (13272) NFC_WRITER: Falha na autenticacao bloco 189[0m
+[0;33mW (13292) NFC_WRITER: Falha na autenticacao bloco 190[0m
+[0;33mW (13322) NFC_WRITER: Falha na autenticacao bloco 192[0m
+[0;33mW (13352) NFC_WRITER: Falha na autenticacao bloco 193[0m
+[0;33mW (13372) NFC_WRITER: Falha na autenticacao bloco 194[0m
+[0;33mW (13402) NFC_WRITER: Falha na autenticacao bloco 196[0m
+[0;33mW (13422) NFC_WRITER: Falha na autenticacao bloco 197[0m
+[0;33mW (13452) NFC_WRITER: Falha na autenticacao bloco 198[0m
+[0;33mW (13472) NFC_WRITER: Falha na autenticacao bloco 200[0m
+[0;33mW (13502) NFC_WRITER: Falha na autenticacao bloco 201[0m
+[0;33mW (13532) NFC_WRITER: Falha na autenticacao bloco 202[0m
+[0;33mW (13552) NFC_WRITER: Falha na autenticacao bloco 204[0m
+[0;33mW (13582) NFC_WRITER: Falha na autenticacao bloco 205[0m
+[0;33mW (13602) NFC_WRITER: Falha na autenticacao bloco 206[0m
+[0;33mW (13632) NFC_WRITER: Falha na autenticacao bloco 208[0m
+[0;33mW (13652) NFC_WRITER: Falha na autenticacao bloco 209[0m
+[0;33mW (13682) NFC_WRITER: Falha na autenticacao bloco 210[0m
+[0;33mW (13712) NFC_WRITER: Falha na autenticacao bloco 212[0m
+[0;33mW (13732) NFC_WRITER: Falha na autenticacao bloco 213[0m
+[0;33mW (13762) NFC_WRITER: Falha na autenticacao bloco 214[0m
+[0;33mW (13782) NFC_WRITER: Falha na autenticacao bloco 216[0m
+[0;33mW (13812) NFC_WRITER: Falha na autenticacao bloco 217[0m
+[0;33mW (13832) NFC_WRITER: Falha na autenticacao bloco 218[0m
+[1;31mE (13862) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (13862) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (13862) task_wdt: Tasks currently running:[0m
+[1;31mE (13862) task_wdt: CPU 0: rc522_polling_t[0m
+[1;31mE (13862) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (13862) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DCD8E:0x3FFB1100 0x400DD150:0x3FFB1120 0x400830F9:0x3FFB1150 0x4000BFED:0x3FFB5BC0 0x4008796A:0x3FFB5BD0 0x40087440:0x3FFB5BF0 0x40082AE8:0x3FFB5C30 0x40082BD1:0x3FFB5C60 0x400D4456:0x3FFB5C80 0x400D425B:0x3FFB5CA0 0x400D4389:0x3FFB5CC0 0x40082CA6:0x3FFB5CE0 0x400E03C9:0x3FFB5D00 0x400D7AD5:0x3FFB5D20 0x400D8F12:0x3FFB5D50 0x400D9FD7:0x3FFB5D90 0x400D71C4:0x3FFB5DE0 0x400D72BC:0x3FFB5F20 0x400D735A:0x3FFB5F40 0x400ED4F1:0x3FFB5F60 0x400ED119:0x3FFB5F90 0x400D7AC2:0x3FFB5FD0 0x400D995D:0x3FFB6000 0x400D7681:0x3FFB6040 0x400875D1:0x3FFB6080
+
+[1;31mE (13922) rc522: rc522_picc_send(86): [0m
+[0;33mW (13932) NFC_WRITER: Falha na autenticacao bloco 220[0m
+[0;33mW (13962) NFC_WRITER: Falha na autenticacao bloco 221[0m
+[0;33mW (13982) NFC_WRITER: Falha na autenticacao bloco 222[0m
+[0;33mW (14012) NFC_WRITER: Falha na autenticacao bloco 224[0m
+W (14032) NFC_WRITER: Falha na autenticacao bloco 225
+[0;33mW (14062) NFC_WRITER: Falha na autenticacao bloco 226[0m
+[0;33mW (14092) NFC_WRITER: Falha na autenticacao bloco 228[0m
+[0;33mW (14112) NFC_WRITER: Falha na autenticacao bloco 229[0m
+[0;33mW (14142) NFC_WRITER: Falha na autenticacao bloco 230[0m
+[0;33mW (14162) NFC_WRITER: Falha na autenticacao bloco 232[0m
+[0;33mW (14192) NFC_WRITER: Falha na autenticacao bloco 233[0m
+[0;33mW (14212) NFC_WRITER: Falha na autenticacao bloco 234[0m
+[0;33mW (14242) NFC_WRITER: Falha na autenticacao bloco 236[0m
+[0;33mW (14262) NFC_WRITER: Falha na autenticacao bloco 237[0m
+[0;33mW (14292) NFC_WRITER: Falha na autenticacao bloco 238[0m
+[0;33mW (14322) NFC_WRITER: Falha na autenticacao bloco 240[0m
+[0;33mW (14342) NFC_WRITER: Falha na autenticacao bloco 241[0m
+[0;33mW (14372) NFC_WRITER: Falha na autenticacao bloco 242[0m
+[0;33mW (14392) NFC_WRITER: Falha na autenticacao bloco 244[0m
+[0;33mW (14422) NFC_WRITER: Falha na autenticacao bloco 245[0m
+[0;33mW (14442) NFC_WRITER: Falha na autenticacao bloco 246[0m
+[0;33mW (14472) NFC_WRITER: Falha na autenticacao bloco 248[0m
+[0;33mW (14502) NFC_WRITER: Falha na autenticacao bloco 249[0m
+[0;33mW (14522) NFC_WRITER: Falha na autenticacao bloco 250[0m
+[0;33mW (14552) NFC_WRITER: Falha na autenticacao bloco 252[0m
+[0;33mW (14572) NFC_WRITER: Falha na autenticacao bloco 253[0m
+[0;33mW (14602) NFC_WRITER: Falha na autenticacao bloco 254[0m
+[0;33mW (14622) NFC_WRITER: Falha na autenticacao bloco 0[0m
+[0;33mW (14652) NFC_WRITER: Falha na autenticacao bloco 1[0m
+[0;33mW (14682) NFC_WRITER: Falha na autenticacao bloco 2[0m
+[0;33mW (14702) NFC_WRITER: Falha na autenticacao bloco 4[0m
+[0;33mW (14732) NFC_WRITER: Falha na autenticacao bloco 5[0m
+[0;33mW (14752) NFC_WRITER: Falha na autenticacao bloco 6[0m
+[0;33mW (14782) NFC_WRITER: Falha na autenticacao bloco 8[0m
+[0;33mW (14802) NFC_WRITER: Falha na autenticacao bloco 9[0m
+[0;33mW (14832) NFC_WRITER: Falha na autenticacao bloco 10[0m
+[0;33mW (14862) NFC_WRITER: Falha na autenticacao bloco 12[0m
+[0;33mW (14882) NFC_WRITER: Falha na autenticacao bloco 13[0m
+[0;33mW (14912) NFC_WRITER: Falha na autenticacao bloco 14[0m
+[0;33mW (14932) NFC_WRITER: Falha na autenticacao bloco 16[0m
+[0;33mW (14962) NFC_WRITER: Falha na autenticacao bloco 17[0m
+[0;33mW (14982) NFC_WRITER: Falha na autenticacao bloco 18[0m
+[0;33mW (15012) NFC_WRITER: Falha na autenticacao bloco 20[0m
+[0;33mW (15042) NFC_WRITER: Falha na autenticacao bloco 21[0m
+[0;33mW (15062) NFC_WRITER: Falha na autenticacao bloco 22[0m
+[0;33mW (15092) NFC_WRITER: Falha na autenticacao bloco 24[0m
+[0;33mW (15112) NFC_WRITER: Falha na autenticacao bloco 25[0m
+[0;33mW (15142) NFC_WRITER: Falha na autenticacao bloco 26[0m
+[0;33mW (15162) NFC_WRITER: Falha na autenticacao bloco 28[0m
+[0;33mW (15192) NFC_WRITER: Falha na autenticacao bloco 29[0m
+[0;33mW (15222) NFC_WRITER: Falha na autenticacao bloco 30[0m
+[0;33mW (15242) NFC_WRITER: Falha na autenticacao bloco 32[0m
+[0;33mW (15272) NFC_WRITER: Falha na autenticacao bloco 33[0m
+[0;33mW (15292) NFC_WRITER: Falha na autenticacao bloco 34[0m
+[0;33mW (15322) NFC_WRITER: Falha na autenticacao bloco 36[0m
+[0;33mW (15342) NFC_WRITER: Falha na autenticacao bloco 37[0m
+[0;33mW (15372) NFC_WRITER: Falha na autenticacao bloco 38[0m
+[0;33mW (15402) NFC_WRITER: Falha na autenticacao bloco 40[0m
+[0;33mW (15422) NFC_WRITER: Falha na autenticacao bloco 41[0m
+[0;33mW (15452) NFC_WRITER: Falha na autenticacao bloco 42[0m
+[0;33mW (15472) NFC_WRITER: Falha na autenticacao bloco 44[0m
+[0;33mW (15502) NFC_WRITER: Falha na autenticacao bloco 45[0m
+[0;33mW (15522) NFC_WRITER: Falha na autenticacao bloco 46[0m
+[0;33mW (15552) NFC_WRITER: Falha na autenticacao bloco 48[0m
+[0;33mW (15582) NFC_WRITER: Falha na autenticacao bloco 49[0m
+[0;33mW (15602) NFC_WRITER: Falha na autenticacao bloco 50[0m
+[0;33mW (15632) NFC_WRITER: Falha na autenticacao bloco 52[0m
+[0;33mW (15652) NFC_WRITER: Falha na autenticacao bloco 53[0m
+[0;33mW (15682) NFC_WRITER: Falha na autenticacao bloco 54[0m
+[0;33mW (15702) NFC_WRITER: Falha na autenticacao bloco 56[0m
+[0;33mW (15732) NFC_WRITER: Falha na autenticacao bloco 57[0m
+[0;33mW (15762) NFC_WRITER: Falha na autenticacao bloco 58[0m
+[0;33mW (15782) NFC_WRITER: Falha na autenticacao bloco 60[0m
+[0;33mW (15812) NFC_WRITER: Falha na autenticacao bloco 61[0m
+[0;33mW (15832) NFC_WRITER: Falha na autenticacao bloco 62[0m
+[0;33mW (15862) NFC_WRITER: Falha na autenticacao bloco 64[0m
+[0;33mW (15882) NFC_WRITER: Falha na autenticacao bloco 65[0m
+[0;33mW (15912) NFC_WRITER: Falha na autenticacao bloco 66[0m
+[0;33mW (15932) NFC_WRITER: Falha na autenticacao bloco 68[0m
+[0;33mW (15962) NFC_WRITER: Falha na autenticacao bloco 69[0m
+[0;33mW (15992) NFC_WRITER: Falha na autenticacao bloco 70[0m
+[0;33mW (16012) NFC_WRITER: Falha na autenticacao bloco 72[0m
+[0;33mW (16042) NFC_WRITER: Falha na autenticacao bloco 73[0m
+[0;33mW (16062) NFC_WRITER: Falha na autenticacao bloco 74[0m
+[0;33mW (16092) NFC_WRITER: Falha na autenticacao bloco 76[0m
+[0;33mW (16112) NFC_WRITER: Falha na autenticacao bloco 77[0m
+[0;33mW (16142) NFC_WRITER: Falha na autenticacao bloco 78[0m
+[0;33mW (16172) NFC_WRITER: Falha na autenticacao bloco 80[0m
+[0;33mW (16192) NFC_WRITER: Falha na autenticacao bloco 81[0m
+[0;33mW (16222) NFC_WRITER: Falha na autenticacao bloco 82[0m
+[0;33mW (16242) NFC_WRITER: Falha na autenticacao bloco 84[0m
+[0;33mW (16272) NFC_WRITER: Falha na autenticacao bloco 85[0m
+[0;33mW (16292) NFC_WRITER: Falha na autenticacao bloco 86[0m
+[0;33mW (16322) NFC_WRITER: Falha na autenticacao bloco 88[0m
+[0;33mW (16352) NFC_WRITER: Falha na autenticacao bloco 89[0m
+[0;33mW (16372) NFC_WRITER: Falha na autenticacao bloco 90[0m
+[0;33mW (16402) NFC_WRITER: Falha na autenticacao bloco 92[0m
+[0;33mW (16422) NFC_WRITER: Falha na autenticacao bloco 93[0m
+[0;33mW (16452) NFC_WRITER: Falha na autenticacao bloco 94[0m
+[0;33mW (16472) NFC_WRITER: Falha na autenticacao bloco 96[0m
+[0;33mW (16502) NFC_WRITER: Falha na autenticacao bloco 97[0m
+[0;33mW (16532) NFC_WRITER: Falha na autenticacao bloco 98[0m
+[0;33mW (16552) NFC_WRITER: Falha na autenticacao bloco 100[0m
+[0;33mW (16582) NFC_WRITER: Falha na autenticacao bloco 101[0m
+[0;33mW (16602) NFC_WRITER: Falha na autenticacao bloco 102[0m
+[0;33mW (16632) NFC_WRITER: Falha na autenticacao bloco 104[0m
+[0;33mW (16652) NFC_WRITER: Falha na autenticacao bloco 105[0m
+[0;33mW (16682) NFC_WRITER: Falha na autenticacao bloco 106[0m
+[0;33mW (16712) NFC_WRITER: Falha na autenticacao bloco 108[0m
+[0;33mW (16732) NFC_WRITER: Falha na autenticacao bloco 109[0m
+[0;33mW (16762) NFC_WRITER: Falha na autenticacao bloco 110[0m
+[0;33mW (16782) NFC_WRITER: Falha na autenticacao bloco 112[0m
+[0;33mW (16812) NFC_WRITER: Falha na autenticacao bloco 113[0m
+[0;33mW (16832) NFC_WRITER: Falha na autenticacao bloco 114[0m
+[0;33mW (16862) NFC_WRITER: Falha na autenticacao bloco 116[0m
+[0;33mW (16892) NFC_WRITER: Falha na autenticacao bloco 117[0m
+[0;33mW (16912) NFC_WRITER: Falha na autenticacao bloco 118[0m
+[0;33mW (16942) NFC_WRITER: Falha na autenticacao bloco 120[0m
+[0;33mW (16962) NFC_WRITER: Falha na autenticacao bloco 121[0m
+[0;33mW (16992) NFC_WRITER: Falha na autenticacao bloco 122[0m
+[0;33mW (17012) NFC_WRITER: Falha na autenticacao bloco 124[0m
+[0;33mW (17042) NFC_WRITER: Falha na autenticacao bloco 125[0m
+[0;33mW (17072) NFC_WRITER: Falha na autenticacao bloco 126[0m
+[0;33mW (17092) NFC_WRITER: Falha na autenticacao bloco 128[0m
+[0;33mW (17122) NFC_WRITER: Falha na autenticacao bloco 129[0m
+[0;33mW (17142) NFC_WRITER: Falha na autenticacao bloco 130[0m
+[0;33mW (17172) NFC_WRITER: Falha na autenticacao bloco 132[0m
+[0;33mW (17192) NFC_WRITER: Falha na autenticacao bloco 133[0m
+[0;33mW (17222) NFC_WRITER: Falha na autenticacao bloco 134[0m
+[0;33mW (17252) NFC_WRITER: Falha na autenticacao bloco 136[0m
+[0;33mW (17272) NFC_WRITER: Falha na autenticacao bloco 137[0m
+[0;33mW (17302) NFC_WRITER: Falha na autenticacao bloco 138[0m
+[0;33mW (17322) NFC_WRITER: Falha na autenticacao bloco 140[0m
+[0;33mW (17352) NFC_WRITER: Falha na autenticacao bloco 141[0m
+[0;33mW (17372) NFC_WRITER: Falha na autenticacao bloco 142[0m
+[0;33mW (17402) NFC_WRITER: Falha na autenticacao bloco 144[0m
+[0;33mW (17422) NFC_WRITER: Falha na autenticacao bloco 145[0m
+[0;33mW (17452) NFC_WRITER: Falha na autenticacao bloco 146[0m
+[0;33mW (17482) NFC_WRITER: Falha na autenticacao bloco 148[0m
+[0;33mW (17502) NFC_WRITER: Falha na autenticacao bloco 149[0m
+[0;33mW (17532) NFC_WRITER: Falha na autenticacao bloco 150[0m
+[0;33mW (17552) NFC_WRITER: Falha na autenticacao bloco 152[0m
+[0;33mW (17582) NFC_WRITER: Falha na autenticacao bloco 153[0m
+[0;33mW (17602) NFC_WRITER: Falha na autenticacao bloco 154[0m
+[0;33mW (17632) NFC_WRITER: Falha na autenticacao bloco 156[0m
+[0;33mW (17662) NFC_WRITER: Falha na autenticacao bloco 157[0m
+[0;33mW (17682) NFC_WRITER: Falha na autenticacao bloco 158[0m
+[0;33mW (17712) NFC_WRITER: Falha na autenticacao bloco 160[0m
+[0;33mW (17732) NFC_WRITER: Falha na autenticacao bloco 161[0m
+[0;33mW (17762) NFC_WRITER: Falha na autenticacao bloco 162[0m
+[0;33mW (17782) NFC_WRITER: Falha na autenticacao bloco 164[0m
+[0;33mW (17812) NFC_WRITER: Falha na autenticacao bloco 165[0m
+[0;33mW (17842) NFC_WRITER: Falha na autenticacao bloco 166[0m
+[0;33mW (17862) NFC_WRITER: Falha na autenticacao bloco 168[0m
+[0;33mW (17892) NFC_WRITER: Falha na autenticacao bloco 169[0m
+[0;33mW (17912) NFC_WRITER: Falha na autenticacao bloco 170[0m
+[0;33mW (17942) NFC_WRITER: Falha na autenticacao bloco 172[0m
+[0;33mW (17962) NFC_WRITER: Falha na autenticacao bloco 173[0m
+[0;33mW (17992) NFC_WRITER: Falha na autenticacao bloco 174[0m
+[0;33mW (18022) NFC_WRITER: Falha na autenticacao bloco 176[0m
+[0;33mW (18042) NFC_WRITER: Falha na autenticacao bloco 177[0m
+[0;33mW (18072) NFC_WRITER: Falha na autenticacao bloco 178[0m
+[0;33mW (18092) NFC_WRITER: Falha na autenticacao bloco 180[0m

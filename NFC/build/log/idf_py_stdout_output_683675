@@ -1,0 +1,83 @@
+[0;32mI (209) cpu_start: Multicore app[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jul  2 2025 14:40:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dbc4h ( 56260) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001dbec vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001dc10 vaddr=3ffb0000 size=02408h (  9224) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1e558h (124248) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=0003e580 vaddr=3ffb2408 size=000cch (   204) load[0m
+[0;32mI (163) esp_image: segment 5: paddr=0003e654 vaddr=40080000 size=0f148h ( 61768) load[0m
+[0;32mI (198) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (198) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (217) app_init: Application information:[0m
+[0;32mI (217) app_init: Project name:     NFC[0m
+[0;32mI (221) app_init: App version:      00a7564-dirty[0m
+[0;32mI (225) app_init: Compile time:     Jul  2 2025 14:40:32[0m
+[0;32mI (230) app_init: ELF file SHA256:  0e2449ec5...[0m
+[0;32mI (234) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (242) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (246) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (250) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (256) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFB2DC8 len 0002D238 (180 KiB): DRAM[0m
+[0;32mI (266) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (272) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 4008F148 len 00010EB8 (67 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (286) spi_flash: flash io: dio[0m
+[0;33mW (289) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (352) rc522: PCD (fw=v2.0) initialized[0m
+[0;32mI (352) NFC_URL_WRITER: Leitor iniciado. Aproxime um cartao para gravar a URL...[0m
+[0;32mI (352) main_task: Returned from app_main()[0m
+[0;32mI (4592) NFC_URL_WRITER: ===================================[0m
+[0;32mI (4592) NFC_URL_WRITER: CARTAO DETETADO![0m
+[0;32mI (4592) rc522: [0m
+[0;32mI (4592) rc522: ╔══════════════╗[0m
+[0;32mI (4602) rc522: ║              ║ Type: MIFARE 1K[0m
+[0;32mI (4602) rc522: ║     RFID     ║ UID:  02 3E B8 1B[0m
+[0;32mI (4602) rc522: ║     CARD     ║ ATQA: 0x0400[0m
+[0;32mI (4612) rc522: ║              ║ SAK:  0x08[0m
+[0;32mI (4612) rc522: ╚══════════════╝[0m
+[0;32mI (4622) rc522: [0m
+[0;32mI (4622) NFC_URL_WRITER: A formatar o cartao para NDEF...[0m
+[0;32mI (4762) NFC_URL_WRITER: Formatacao NDEF concluida.[0m
+[0;32mI (4762) NFC_URL_WRITER: Formatacao bem-sucedida. A escrever a URL...[0m
+[0;32mI (4762) NFC_URL_WRITER: A escrever URL no cartao...[0m
+[0;32mI (4782) NFC_URL_WRITER: ********************************[0m
+[0;32mI (4782) NFC_URL_WRITER: VITORIA! URL gravada com sucesso![0m
+[0;32mI (4782) NFC_URL_WRITER: Teste com o seu telemovel.[0m
+[0;32mI (4782) NFC_URL_WRITER: ********************************[0m
+[0;32mI (4792) NFC_URL_WRITER: Operacao concluida. Aproxime outro cartao.[0m
+[0;32mI (4792) NFC_URL_WRITER: ===================================[0m
+

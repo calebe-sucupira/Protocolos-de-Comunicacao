@@ -1,0 +1,141 @@
+209) cpu_start: Multicore app
+I (21�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jul  2 2025 14:40:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0dce4h ( 56548) map[0m
+[0;32mI (109) esp_image: segment 1: paddr=0001dd0c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001dd30 vaddr=3ffb0000 size=022e8h (  8936) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1e670h (124528) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=0003e698 vaddr=3ffb22e8 size=001ech (   492) load[0m
+[0;32mI (164) esp_image: segment 5: paddr=0003e88c vaddr=40080000 size=0f148h ( 61768) load[0m
+[0;32mI (198) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (198) boot: Disabling RNG early entropy source...[0m
+[0;32mI (209) cpu_start: Multicore app[0m
+[0;32mI (217) cpu_start: Pro cpu start user code[0m
+[0;32mI (217) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (217) app_init: Application information:[0m
+[0;32mI (217) app_init: Project name:     NFC[0m
+[0;32mI (221) app_init: App version:      00a7564-dirty[0m
+[0;32mI (225) app_init: Compile time:     Jul  2 2025 14:40:32[0m
+[0;32mI (230) app_init: ELF file SHA256:  0a5e47370...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (238) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (242) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (246) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (250) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (256) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (261) heap_init: At 3FFB2DC8 len 0002D238 (180 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (272) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 4008F148 len 00010EB8 (67 KiB): IRAM[0m
+[0;32mI (284) spi_flash: detected chip: generic[0m
+[0;32mI (286) spi_flash: flash io: dio[0m
+[0;33mW (289) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (352) rc522: PCD (fw=v2.0) initialized[0m
+[0;32mI (352) NFC_AUTO_WRITER: Leitor automatico iniciado. Aproxime um cartao para o limpar e gravar a URL...[0m
+[0;32mI (352) main_task: Returned from app_main()[0m
+[0;32mI (2772) NFC_AUTO_WRITER: ===================================[0m
+[0;32mI (2772) NFC_AUTO_WRITER: CARTAO DETETADO![0m
+[0;32mI (2772) rc522: [0m
+[0;32mI (2772) rc522: ╔══════════════╗[0m
+[0;32mI (2782) rc522: ║              ║ Type: MIFARE 1K[0m
+[0;32mI (2782) rc522: ║     RFID     ║ UID:  10 A2 7E 1B[0m
+[0;32mI (2782) rc522: ║     CARD     ║ ATQA: 0x0400[0m
+[0;32mI (2792) rc522: ║              ║ SAK:  0x08[0m
+[0;32mI (2792) rc522: ╚══════════════╝[0m
+[0;32mI (2802) rc522: [0m
+[0;32mI (2802) NFC_AUTO_WRITER: A iniciar limpeza do cartao...[0m
+[0;32mI (2812) NFC_AUTO_WRITER: Cartao formatado com chave NDEF. A limpar...[0m
+[0;33mW (2872) NFC_AUTO_WRITER: clean: auth fail setor 2. A tentar com chave padrao...[0m
+[1;31mE (2892) NFC_AUTO_WRITER: clean: auth fail definitivo setor 2[0m
+[0;33mW (2922) NFC_AUTO_WRITER: clean: auth fail setor 3. A tentar com chave padrao...[0m
+[1;31mE (2942) NFC_AUTO_WRITER: clean: auth fail definitivo setor 3[0m
+[0;33mW (2972) NFC_AUTO_WRITER: clean: auth fail setor 4. A tentar com chave padrao...[0m
+[1;31mE (3002) NFC_AUTO_WRITER: clean: auth fail definitivo setor 4[0m
+[0;33mW (3022) NFC_AUTO_WRITER: clean: auth fail setor 5. A tentar com chave padrao...[0m
+[1;31mE (3052) NFC_AUTO_WRITER: clean: auth fail definitivo setor 5[0m
+[0;33mW (3072) NFC_AUTO_WRITER: clean: auth fail setor 6. A tentar com chave padrao...[0m
+[1;31mE (3102) NFC_AUTO_WRITER: clean: auth fail definitivo setor 6[0m
+[0;33mW (3122) NFC_AUTO_WRITER: clean: auth fail setor 7. A tentar com chave padrao...[0m
+[1;31mE (3152) NFC_AUTO_WRITER: clean: auth fail definitivo setor 7[0m
+[0;33mW (3182) NFC_AUTO_WRITER: clean: auth fail setor 8. A tentar com chave padrao...[0m
+[1;31mE (3202) NFC_AUTO_WRITER: clean: auth fail definitivo setor 8[0m
+[0;33mW (3232) NFC_AUTO_WRITER: clean: auth fail setor 9. A tentar com chave padrao...[0m
+[1;31mE (3252) NFC_AUTO_WRITER: clean: auth fail definitivo setor 9[0m
+[0;33mW (3282) NFC_AUTO_WRITER: clean: auth fail setor 10. A tentar com chave padrao...[0m
+[1;31mE (3302) NFC_AUTO_WRITER: clean: auth fail definitivo setor 10[0m
+[0;33mW (3332) NFC_AUTO_WRITER: clean: auth fail setor 11. A tentar com chave padrao...[0m
+[1;31mE (3362) NFC_AUTO_WRITER: clean: auth fail definitivo setor 11[0m
+[0;33mW (3382) NFC_AUTO_WRITER: clean: auth fail setor 12. A tentar com chave padrao...[0m
+[1;31mE (3412) NFC_AUTO_WRITER: clean: auth fail definitivo setor 12[0m
+[0;33mW (3432) NFC_AUTO_WRITER: clean: auth fail setor 13. A tentar com chave padrao...[0m
+[1;31mE (3462) NFC_AUTO_WRITER: clean: auth fail definitivo setor 13[0m
+[0;33mW (3482) NFC_AUTO_WRITER: clean: auth fail setor 14. A tentar com chave padrao...[0m
+[1;31mE (3512) NFC_AUTO_WRITER: clean: auth fail definitivo setor 14[0m
+[0;33mW (3542) NFC_AUTO_WRITER: clean: auth fail setor 15. A tentar com chave padrao...[0m
+[1;31mE (3562) NFC_AUTO_WRITER: clean: auth fail definitivo setor 15[0m
+[0;32mI (3562) NFC_AUTO_WRITER: Limpeza concluida.[0m
+[0;32mI (3562) NFC_AUTO_WRITER: A formatar o cartao para NDEF...[0m
+[1;31mE (3592) NFC_AUTO_WRITER: format_tag(96): format: auth fail setor 1[0m
+[1;31mE (3592) NFC_AUTO_WRITER: Falha ao formatar o cartao apos a limpeza.[0m
+[0;32mI (3592) NFC_AUTO_WRITER: Operacao concluida. Aproxime outro cartao.[0m
+[0;32mI (3602) NFC_AUTO_WRITER: ===================================[0m
+
+[0;32mI (10082) NFC_AUTO_WRITER: ===================================[0m
+[0;32mI (10082) NFC_AUTO_WRITER: CARTAO DETETADO![0m
+[0;32mI (10082) rc522: [0m
+[0;32mI (10082) rc522: ╔══════════════╗[0m
+[0;32mI (10092) rc522: ║              ║ Type: MIFARE 1K[0m
+[0;32mI (10092) rc522: ║     RFID     ║ UID:  10 A2 7E 1B[0m
+[0;32mI (10092) rc522: ║     CARD     ║ ATQA: 0x0400[0m
+[0;32mI (10102) rc522: ║              ║ SAK:  0x08[0m
+[0;32mI (10102) rc522: ╚══════════════╝[0m
+[0;32mI (10112) rc522: [0m
+[0;32mI (10112) NFC_AUTO_WRITER: A iniciar limpeza do cartao...[0m
+[1;31mE (10172) NFC_AUTO_WRITER: Nao foi possivel autenticar com nenhuma chave conhecida.[0m
+[1;31mE (10172) NFC_AUTO_WRITER: Falha ao limpar o cartao. O cartao pode ter chaves desconhecidas ou estar danificado.[0m
+[0;32mI (10182) NFC_AUTO_WRITER: Operacao concluida. Aproxime outro cartao.[0m
+[0;32mI (10182) NFC_AUTO_WRITER: ===================================[0m
+
+[0;32mI (24562) NFC_AUTO_WRITER: ===================================[0m
+[0;32mI (24562) NFC_AUTO_WRITER: CARTAO DETETADO![0m
+[0;32mI (24562) rc522: [0m
+[0;32mI (24562) rc522: ╔══════════════╗[0m
+[0;32mI (24572) rc522: ║              ║ Type: MIFARE 1K[0m
+[0;32mI (24572) rc522: ║     RFID     ║ UID:  10 A2 7E 1B[0m
+[0;32mI (24572) rc522: ║     CARD     ║ ATQA: 0x0400[0m
+[0;32mI (24582) rc522: ║              ║ SAK:  0x08[0m
+[0;32mI (24582) rc522: ╚══════════════╝[0m
+[0;32mI (24592) rc522: [0m
+[0;32mI (24592) NFC_AUTO_WRITER: A iniciar limpeza do cartao...[0m
+[1;31mE (24652) NFC_AUTO_WRITER: Nao foi possivel autenticar com nenhuma chave conhecida.[0m
+[1;31mE (24652) NFC_AUTO_WRITER: Falha ao limpar o cartao. O cartao pode ter chaves desconhecidas ou estar danificado.[0m
+[0;32mI (24652) NFC_AUTO_WRITER: Operacao concluida. Aproxime outro cartao.[0m
+[0;32mI (24662) NFC_AUTO_WRITER: ===================================[0m
+

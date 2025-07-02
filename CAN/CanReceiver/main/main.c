@@ -6,8 +6,8 @@
 #include "driver/twai.h"
 #include "driver/gpio.h"
 
-#define TX_GPIO_NUM ((gpio_num_t)4)
-#define RX_GPIO_NUM ((gpio_num_t)5)
+#define TX_GPIO_NUM ((gpio_num_t)5)
+#define RX_GPIO_NUM ((gpio_num_t)4)
 #define LED_GPIO ((gpio_num_t)17)
 
 // Parâmetros do LED
